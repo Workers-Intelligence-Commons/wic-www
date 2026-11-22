@@ -1,0 +1,45 @@
+---
+// The frame of every page: <head>, header, main column and footer.
+import "@workers-intelligence-commons/tokens/tokens.css";
+import "@workers-intelligence-commons/components/styles.css";
+import "../styles/site.css";
+import Seo from "../components/Seo.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import { type Locale, localeTags, locales } from "../i18n/locales.ts";
+import { ui } from "../copy/ui.ts";
+
+interface Props {
+  locale: Locale;
+  page: string;
+  title: string;
+  description: string;
+  type?: "website" | "article";
+  published?: Date;
+  alternates?: readonly Locale[];
+  jsonLd?: Record<string, unknown>[];
+  noindex?: boolean;
+}
+const props = Astro.props;
+const alternates = props.alternates ?? locales;
+---
+<!doctype html>
+<html lang={localeTags[props.locale].lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <Seo {...props} alternates={alternates} />
+  </head>
+  <body>
+    <a class="skip" href="#main">{ui[props.locale].skip}</a>
+    <div class="wrap">
+      <SiteHeader locale={props.locale} page={props.page} alternates={alternates} />
+      <main id="main">
+        <slot />
+      </main>
+      <SiteFooter locale={props.locale} />
+    </div>
+  </body>
+</html>

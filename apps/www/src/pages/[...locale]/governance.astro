@@ -1,0 +1,23 @@
+---
+import { Notice, SectionHeading } from "@workers-intelligence-commons/components";
+import PageHeading from "../../components/PageHeading.astro";
+import Base from "../../layouts/Base.astro";
+import type { Locale } from "../../i18n/locales.ts";
+import { localePaths } from "../../i18n/routes.ts";
+import { governance } from "../../copy/governance.ts";
+
+export const getStaticPaths = localePaths;
+const { locale } = Astro.props as { locale: Locale };
+const t = governance[locale];
+---
+<Base locale={locale} page="governance" title={t.title} description={t.description}>
+  <PageHeading kicker={t.kicker} title={t.title} />
+  <p class="lead">{t.lead}</p>
+  <div class="notice-row"><Notice title={t.statusTitle}>{t.status}</Notice></div>
+  {t.blocks.map((b) => (
+    <section>
+      <SectionHeading kicker={b.kicker}>{b.heading}</SectionHeading>
+      {b.paragraphs.map((text) => <p>{text}</p>)}
+    </section>
+  ))}
+</Base>

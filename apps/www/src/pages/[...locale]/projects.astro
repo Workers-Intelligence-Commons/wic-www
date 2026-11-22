@@ -1,0 +1,37 @@
+---
+import { ButtonLink, Mark, SectionHeading } from "@workers-intelligence-commons/components";
+import PageHeading from "../../components/PageHeading.astro";
+import Base from "../../layouts/Base.astro";
+import type { Locale } from "../../i18n/locales.ts";
+import { localePaths } from "../../i18n/routes.ts";
+import { projects } from "../../copy/projects.ts";
+
+export const getStaticPaths = localePaths;
+const { locale } = Astro.props as { locale: Locale };
+const t = projects[locale];
+const jsonLd = t.items.map((p) => ({
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  name: p.name,
+  codeRepository: p.repository,
+  license: "https://spdx.org/licenses/AGPL-3.0-or-later.html",
+  description: p.paragraphs[0],
+}));
+---
+<Base locale={locale} page="projects" title={t.title} description={t.description} jsonLd={jsonLd}>
+  <PageHeading kicker={t.kicker} title={t.title} />
+  <p class="lead">{t.lead}</p>
+  {t.items.map((p) => (
+    <section id={p.id}>
+      {p.mark && <Mark name={p.mark} height={40} />}
+      <SectionHeading kicker={p.kicker}>{p.name}</SectionHeading>
+      {p.paragraphs.map((text) => <p>{text}</p>)}
+      <table class="ledger">
+        <tbody>
+          {p.facts.map((f) => <tr><th scope="row">{f.label}</th><td class="value">{f.value}</td></tr>)}
+        </tbody>
+      </table>
+      <div class="actions"><ButtonLink variant="ink" href={p.repository}>{p.link}</ButtonLink></div>
+    </section>
+  ))}
+</Base>

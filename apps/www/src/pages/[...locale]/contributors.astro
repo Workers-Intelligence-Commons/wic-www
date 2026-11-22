@@ -1,0 +1,33 @@
+---
+import { SectionHeading } from "@workers-intelligence-commons/components";
+import PageHeading from "../../components/PageHeading.astro";
+import Base from "../../layouts/Base.astro";
+import type { Locale } from "../../i18n/locales.ts";
+import { localePaths } from "../../i18n/routes.ts";
+import { contributorsPage } from "../../copy/contributors.ts";
+import { contributors } from "../../data/contributors.ts";
+
+export const getStaticPaths = localePaths;
+const { locale } = Astro.props as { locale: Locale };
+const t = contributorsPage[locale];
+---
+<Base locale={locale} page="contributors" title={t.title} description={t.description}>
+  <PageHeading kicker={t.kicker} title={t.title} />
+  <p class="lead">{t.lead}</p>
+
+  <section>
+    <SectionHeading kicker={t.listKicker}>{t.listHeading}</SectionHeading>
+    {contributors.length === 0 ? (
+      <p class="empty">{t.empty}</p>
+    ) : (
+      <ul>
+        {contributors.map((p) => <li>{p.url ? <a href={p.url}>{p.name}</a> : p.name}, <span class="aside">{p.for[locale]}</span></li>)}
+      </ul>
+    )}
+  </section>
+
+  <section>
+    <SectionHeading kicker={t.join.kicker}>{t.join.heading}</SectionHeading>
+    {t.join.paragraphs.map((text) => <p set:html={text} />)}
+  </section>
+</Base>

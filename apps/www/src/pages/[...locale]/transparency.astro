@@ -1,0 +1,51 @@
+---
+import { Notice, SectionHeading } from "@workers-intelligence-commons/components";
+import PageHeading from "../../components/PageHeading.astro";
+import Base from "../../layouts/Base.astro";
+import { ui } from "../../copy/ui.ts";
+import type { Locale } from "../../i18n/locales.ts";
+import { localePaths } from "../../i18n/routes.ts";
+import { transparency } from "../../copy/transparency.ts";
+import { inKindGifts } from "../../data/contributors.ts";
+
+export const getStaticPaths = localePaths;
+const { locale } = Astro.props as { locale: Locale };
+const t = transparency[locale];
+const c = t.inKind.columns;
+---
+<Base locale={locale} page="transparency" title={t.title} description={t.description}>
+  <PageHeading kicker={t.kicker} title={t.title} />
+  <p class="lead">{t.lead}</p>
+  <div class="notice-row"><Notice title={ui[locale].honestStatus}>{t.status}</Notice></div>
+
+  <section>
+    <SectionHeading kicker={t.money.kicker}>{t.money.heading}</SectionHeading>
+    <table class="ledger">
+      <tbody>
+        {t.money.rows.map((r) => <tr><th scope="row">{r.label}</th><td class="value">{r.value}</td></tr>)}
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <SectionHeading kicker={t.inKind.kicker}>{t.inKind.heading}</SectionHeading>
+    <p>{t.inKind.body}</p>
+    {inKindGifts.length === 0 ? (
+      <p class="empty">{t.inKind.empty}</p>
+    ) : (
+      <table class="ledger">
+        <thead><tr><th scope="col">{c.date}</th><th scope="col">{c.giver}</th><th scope="col">{c.what}</th><th scope="col">{c.use}</th></tr></thead>
+        <tbody>
+          {inKindGifts.map((g) => (
+            <tr><td class="value">{g.date}</td><td>{g.giver ?? t.inKind.anonymous}</td><td>{g.what[locale]}</td><td>{g.use[locale]}</td></tr>
+          ))}
+        </tbody>
+      </table>
+    )}
+  </section>
+
+  <section>
+    <SectionHeading kicker={t.promises.kicker}>{t.promises.heading}</SectionHeading>
+    <ul>{t.promises.items.map((item) => <li>{item}</li>)}</ul>
+  </section>
+</Base>

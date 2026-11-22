@@ -1,0 +1,21 @@
+---
+import { Mark } from "@workers-intelligence-commons/components";
+import type { Locale } from "../i18n/locales.ts";
+import { pathFor } from "../i18n/routes.ts";
+import { ui } from "../copy/ui.ts";
+import { site } from "../data/site.ts";
+
+interface Props {
+  locale: Locale;
+}
+const t = ui[Astro.props.locale];
+---
+<footer class="site-footer">
+  <Mark name="wic" height={28} />
+  <ul>
+    {t.footerNav.map((item) => <li><a href={pathFor(Astro.props.locale, item.page)}>{item.label}</a></li>)}
+    <li><a href={site.github}>GitHub</a></li>
+    <li><a href={site.repositories.www}>{t.repository}</a></li>
+  </ul>
+  <p class="aside">{t.footerNote}</p>
+</footer>

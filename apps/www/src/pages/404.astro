@@ -1,0 +1,20 @@
+---
+import { ButtonLink } from "@workers-intelligence-commons/components";
+import PageHeading from "../components/PageHeading.astro";
+import Base from "../layouts/Base.astro";
+import { pathFor } from "../i18n/routes.ts";
+import { ui } from "../copy/ui.ts";
+
+const t = ui.en.notFound;
+const fr = ui.fr.notFound;
+---
+<Base locale="en" page="404" title={t.title} description={t.description} alternates={[]} noindex>
+  <PageHeading kicker="404" title={t.heading} />
+  <p>{t.body}</p>
+  <div class="actions"><ButtonLink variant="ink" href={pathFor("en")}>{t.back}</ButtonLink></div>
+  <section lang="fr">
+    <h2 class="heading">{fr.heading}</h2>
+    <p>{fr.body}</p>
+    <div class="actions"><ButtonLink variant="quiet" href={pathFor("fr")}>{fr.back}</ButtonLink></div>
+  </section>
+</Base>

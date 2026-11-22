@@ -1,0 +1,66 @@
+---
+import { ButtonLink, Notice, SectionHeading } from "@workers-intelligence-commons/components";
+import SloganText from "../../components/SloganText.tsx";
+import Base from "../../layouts/Base.astro";
+import { ui } from "../../copy/ui.ts";
+import type { Locale } from "../../i18n/locales.ts";
+import { postsIn, slugOf } from "../../i18n/news.ts";
+import { localePaths, pathFor } from "../../i18n/routes.ts";
+import { home } from "../../copy/home.ts";
+import { news } from "../../copy/news.ts";
+import { site } from "../../data/site.ts";
+
+export const getStaticPaths = localePaths;
+const { locale } = Astro.props as { locale: Locale };
+const t = home[locale];
+const latest = (await postsIn(locale)).slice(0, 3);
+const date = new Intl.DateTimeFormat(locale, news[locale].dateFormat);
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: site.name,
+    alternateName: site.shortName,
+    url: site.url,
+    logo: new URL("/favicon.svg", site.url).href,
+    email: site.contact,
+    description: t.description,
+    sameAs: [site.github],
+  },
+  { "@context": "https://schema.org", "@type": "WebSite", name: site.name, url: site.url, inLanguage: ["en", "fr"] },
+];
+---
+<Base locale={locale} page="" title={t.title} description={t.description} jsonLd={jsonLd}>
+  <SloganText kicker={t.kicker} text={t.slogan} />
+  <p class="lead">{t.lead}</p>
+  <div class="notice-row"><Notice title={ui[locale].honestStatus}>{t.status}</Notice></div>
+
+  <section>
+    <SectionHeading kicker={t.projects.kicker}>{t.projects.heading}</SectionHeading>
+    <p>{t.projects.body}</p>
+    <div class="actions"><ButtonLink variant="ink" href={pathFor(locale, "projects")}>{t.projects.link}</ButtonLink></div>
+  </section>
+
+  <section>
+    <SectionHeading kicker={t.help.kicker}>{t.help.heading}</SectionHeading>
+    <p>{t.help.body}</p>
+    <div class="actions">
+      <ButtonLink variant="primary" href={pathFor(locale, "support")}>{t.help.support}</ButtonLink>
+      <ButtonLink variant="quiet" href={site.github}>{t.help.contribute}</ButtonLink>
+    </div>
+  </section>
+
+  <section>
+    <SectionHeading kicker={t.news.kicker}>{t.news.heading}</SectionHeading>
+    <ul class="posts">
+      {latest.map((post) => (
+        <li>
+          <h3><a href={pathFor(locale, `news/${slugOf(post)}`)}>{post.data.title}</a></h3>
+          <time class="aside" datetime={post.data.date.toISOString().slice(0, 10)}>{date.format(post.data.date)}</time>
+          <p>{post.data.description}</p>
+        </li>
+      ))}
+    </ul>
+    <div class="actions"><ButtonLink variant="quiet" href={pathFor(locale, "news")}>{t.news.all}</ButtonLink></div>
+  </section>
+</Base>

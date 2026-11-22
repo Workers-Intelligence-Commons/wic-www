@@ -1,0 +1,85 @@
+/* Layout of the site: one column of liner notes on poster paper, after the design system's example page. */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-serif); font-size: 18px; line-height: 30px; overflow-x: hidden; }
+.wrap { max-width: 800px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: var(--space-6) var(--space-8); }
+a:not(.wic-btn) { color: var(--ink); text-decoration-color: var(--red); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+.aside { font-style: italic; font-size: 17px; line-height: 24px; color: var(--ink-muted); }
+p { margin: 0 0 var(--space-3); max-width: 36em; }
+ul, ol { max-width: 36em; }
+code { font-family: var(--font-typewriter); font-size: 15px; }
+h2, h3 { font-family: var(--font-gothic); }
+h3 { font-weight: 800; font-size: 24px; line-height: 30px; margin: var(--space-6) 0 var(--space-2); }
+
+.skip { position: absolute; left: -9999px; top: 0; background: var(--ink); color: var(--paper) !important; padding: var(--space-2) var(--space-4); z-index: 10; }
+.skip:focus { left: var(--space-4); top: var(--space-4); }
+
+/* Header: the monogram, the sections, the other language */
+.site-header { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3) var(--space-6); margin-bottom: var(--space-8); }
+.brand { display: inline-flex; align-items: center; gap: var(--space-3); text-decoration: none; }
+.site-header nav { flex: 1 1 100%; order: 3; }
+.site-header ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-4); max-width: none; }
+.site-header nav a { font-family: var(--font-gothic); font-weight: 700; font-size: 16px; line-height: 24px; text-decoration: none; }
+.site-header nav a[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--ochre); text-decoration-thickness: 5px; text-underline-offset: 4px; }
+/* Language menu: a native disclosure, so it works without JavaScript */
+.lang-menu { position: relative; margin-left: auto; font-family: var(--font-gothic); font-weight: 700; font-size: 16px; line-height: 24px; }
+.lang-menu summary { cursor: pointer; list-style: none; padding: var(--space-1) var(--space-2); color: var(--ink-muted); }
+.lang-menu summary::-webkit-details-marker { display: none; }
+.lang-menu summary::after { content: " \25BE"; }
+.lang-menu summary:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+.lang-menu ul { position: absolute; right: 0; top: 100%; z-index: 5; list-style: none; margin: var(--space-1) 0 0; padding: var(--space-2) 0; min-width: 9em; background: var(--paper-raised); border-top: 4px solid var(--ink); }
+.lang-menu li a { display: block; padding: var(--space-1) var(--space-4); text-decoration: none; }
+.lang-menu li a[aria-current="true"] { text-decoration: underline; text-decoration-color: var(--ochre); text-decoration-thickness: 5px; text-underline-offset: 4px; }
+
+/* Page heading */
+.page-heading { margin-bottom: var(--space-8); }
+.page-heading h1 { margin: 0; display: flex; flex-direction: column; gap: var(--space-1); }
+.page-heading .kicker { font-weight: 400; }
+.heading { font-family: var(--font-gothic); font-weight: 800; font-size: 40px; line-height: 46px; color: var(--ink); }
+@media (max-width: 560px) { .heading { font-size: 32px; line-height: 38px; } }
+
+.wic-slogan { margin-bottom: var(--space-6); }
+.lead { font-size: 21px; line-height: 32px; max-width: 34em; margin: 0 0 var(--space-8); }
+main > section, .section { margin-top: var(--space-12); }
+.after { margin-top: var(--space-6); font-size: 21px; line-height: 32px; }
+.notice-row { margin: var(--space-8) 0; }
+
+/* In this order: a real sequence */
+.order { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-4); }
+.order li { display: grid; grid-template-columns: 64px 1fr; align-items: baseline; gap: var(--space-3); }
+.order .n { font-family: var(--font-display); font-size: 64px; line-height: .8; color: var(--red); }
+.order li:nth-child(2) .n { color: var(--ink); }
+.order li > span:last-child { min-width: 0; }
+
+/* Parallel sheets, stacked in one column */
+.sheets { display: grid; gap: var(--space-6); }
+.sheets ul { margin: 0 0 var(--space-4); padding-left: 1.1em; }
+.sheets li { margin-bottom: var(--space-2); }
+.actions { display: flex; flex-wrap: wrap; gap: var(--space-3) var(--space-6); align-items: center; margin-top: var(--space-4); }
+
+/* Two things kept apart */
+.apart { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); }
+.apart > div { min-width: 0; border-top: 2px solid var(--ink); padding-top: var(--space-3); }
+.apart > div:last-child { border-top-color: var(--red); }
+.apart h3 { margin-top: 0; }
+@media (max-width: 560px) { .apart { grid-template-columns: 1fr; } }
+
+/* Ledger: rows of facts with italic labels and typed values */
+.ledger { width: 100%; max-width: 640px; border-collapse: collapse; margin: var(--space-4) 0; }
+.ledger th, .ledger td { text-align: left; vertical-align: top; padding: var(--space-2) var(--space-3) var(--space-2) 0; border-bottom: 1px solid var(--line); }
+.ledger th { font-style: italic; font-weight: 400; color: var(--ink-muted); font-size: 16px; }
+.ledger td.value { font-family: var(--font-typewriter); font-size: 15px; }
+.empty { font-style: italic; color: var(--ink-muted); }
+
+/* News */
+.posts { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-6); }
+.posts h2, .posts h3 { margin: 0; font-weight: 800; font-size: 24px; line-height: 30px; }
+.posts time { display: block; }
+.prose h2 { font-weight: 800; font-size: 28px; line-height: 34px; margin: var(--space-8) 0 var(--space-3); }
+.prose ul, .prose ol { padding-left: 1.1em; }
+
+/* Footer */
+.site-footer { margin-top: var(--space-12); padding-top: var(--space-6); border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: var(--space-3) var(--space-6); align-items: center; }
+.site-footer ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-4); }
+.site-footer p { flex-basis: 100%; margin: 0; max-width: none; }

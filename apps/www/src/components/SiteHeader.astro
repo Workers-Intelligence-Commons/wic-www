@@ -1,0 +1,44 @@
+---
+import { Mark } from "@workers-intelligence-commons/components";
+import { type Locale, localeNames, localeTags, locales } from "../i18n/locales.ts";
+import { pathFor } from "../i18n/routes.ts";
+import { ui } from "../copy/ui.ts";
+
+interface Props {
+  locale: Locale;
+  page: string;
+  /** Locales that have this page; the menu links to another locale's home when the page is missing there. */
+  alternates: readonly Locale[];
+}
+const { locale, page, alternates } = Astro.props;
+const t = ui[locale];
+const current = page.split("/")[0];
+// Each choice goes through /lang/<locale>/, which saves it in a cookie and returns to the page.
+const choices = locales.map((l) => {
+  const target = alternates.includes(l) ? pathFor(l, page) : pathFor(l);
+  return { locale: l, href: `/lang/${l}/?to=${encodeURIComponent(target)}` };
+});
+---
+<header class="site-header">
+  <a class="brand" href={pathFor(locale)} aria-label={t.home}>
+    <Mark name="wic" height={28} />
+    <span class="aside">workers&rsquo; intelligence commons</span>
+  </a>
+  <details class="lang-menu">
+    <summary aria-label={`${t.language}: ${localeNames[locale]}`}>{localeNames[locale]}</summary>
+    <ul>
+      {choices.map((c) => (
+        <li>
+          <a href={c.href} lang={localeTags[c.locale].lang} hreflang={localeTags[c.locale].lang} rel="nofollow" aria-current={c.locale === locale ? "true" : undefined}>{localeNames[c.locale]}</a>
+        </li>
+      ))}
+    </ul>
+  </details>
+  <nav aria-label={t.navLabel}>
+    <ul>
+      {t.nav.map((item) => (
+        <li><a href={pathFor(locale, item.page)} aria-current={current === item.page ? "page" : undefined}>{item.label}</a></li>
+      ))}
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,51 @@
+---
+import { render } from "astro:content";
+import Base from "../../../layouts/Base.astro";
+import { type Locale, locales } from "../../../i18n/locales.ts";
+import { localeOf, postsIn, slugOf, type Post } from "../../../i18n/news.ts";
+import { localeParam, pathFor } from "../../../i18n/routes.ts";
+import { news } from "../../../copy/news.ts";
+import { site } from "../../../data/site.ts";
+
+export async function getStaticPaths() {
+  const all = (await Promise.all(locales.map(postsIn))).flat();
+  return all.map((post) => ({
+    params: { locale: localeParam(localeOf(post)), slug: slugOf(post) },
+    props: {
+      post,
+      locale: localeOf(post),
+      alternates: locales.filter((l) => all.some((p) => localeOf(p) === l && slugOf(p) === slugOf(post))),
+    },
+  }));
+}
+
+const { post, locale, alternates } = Astro.props as { post: Post; locale: Locale; alternates: Locale[] };
+const t = news[locale];
+const { Content } = await render(post);
+const date = new Intl.DateTimeFormat(locale, t.dateFormat);
+const page = `news/${slugOf(post)}`;
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    headline: post.data.title,
+    description: post.data.description,
+    datePublished: post.data.date.toISOString(),
+    inLanguage: locale,
+    mainEntityOfPage: new URL(pathFor(locale, page), site.url).href,
+    image: new URL("/og.png", site.url).href,
+    author: { "@type": "Organization", name: site.name, url: site.url },
+    publisher: { "@type": "Organization", name: site.name, url: site.url },
+  },
+];
+---
+<Base locale={locale} page={page} title={post.data.title} description={post.data.description} type="article" published={post.data.date} alternates={alternates} jsonLd={jsonLd}>
+  <article class="prose">
+    <header class="page-heading">
+      <h1><span class="aside kicker"><time datetime={post.data.date.toISOString().slice(0, 10)}>{date.format(post.data.date)}</time></span><span class="heading">{post.data.title}</span></h1>
+    </header>
+    <p class="lead">{post.data.description}</p>
+    <Content />
+  </article>
+  <p class="section"><a href={pathFor(locale, "news")}>{t.back}</a></p>
+</Base>

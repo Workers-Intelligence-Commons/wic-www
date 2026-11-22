@@ -1,0 +1,69 @@
+---
+import { ButtonLink, Notice, SectionHeading, Sheet } from "@workers-intelligence-commons/components";
+import SloganText from "../../components/SloganText.tsx";
+import Base from "../../layouts/Base.astro";
+import { ui } from "../../copy/ui.ts";
+import type { Locale } from "../../i18n/locales.ts";
+import { localePaths, pathFor } from "../../i18n/routes.ts";
+import { support } from "../../copy/support.ts";
+import { site } from "../../data/site.ts";
+
+export const getStaticPaths = localePaths;
+const { locale } = Astro.props as { locale: Locale };
+const t = support[locale];
+---
+<Base locale={locale} page="support" title={t.title} description={t.description}>
+  <SloganText kicker={t.kicker} text={t.slogan} />
+  <p class="lead">{t.lead}</p>
+  <div class="notice-row"><Notice title={ui[locale].honestStatus}>{t.status}</Notice></div>
+
+  <section>
+    <SectionHeading kicker={t.pays.kicker}>{t.pays.heading}</SectionHeading>
+    <ol class="order">
+      {t.pays.items.map((item, i) => <li><span class="n" aria-hidden="true">{i + 1}</span><span>{item}</span></li>)}
+    </ol>
+    <p class="after" set:html={t.pays.after} />
+  </section>
+
+  <section>
+    <SectionHeading kicker={t.ways.kicker}>{t.ways.heading}</SectionHeading>
+    <div class="sheets">
+      <Sheet tone="red" title={t.ways.money.title}>
+        {t.ways.money.paragraphs.map((text) => <p>{text}</p>)}
+      </Sheet>
+      <Sheet tone="ochre" title={t.ways.compute.title}>
+        {t.ways.compute.paragraphs.map((text) => <p set:html={text} />)}
+      </Sheet>
+      <Sheet title={t.ways.work.title}>
+        {t.ways.work.paragraphs.map((text) => <p>{text}</p>)}
+        <div class="actions">
+          <ButtonLink variant="primary" href={site.github}>{t.ways.work.primary}</ButtonLink>
+          <ButtonLink variant="quiet" href={pathFor(locale, "contributors")}>{t.ways.work.secondary}</ButtonLink>
+        </div>
+      </Sheet>
+    </div>
+  </section>
+
+  <section>
+    <SectionHeading kicker={t.apart.kicker}>{t.apart.heading}</SectionHeading>
+    <div class="apart">
+      <div>
+        <h3>{t.apart.donations.title}</h3>
+        <span class="aside">{t.apart.donations.tag}</span>
+        <p>{t.apart.donations.body}</p>
+      </div>
+      <div>
+        <h3>{t.apart.service.title}</h3>
+        <span class="aside">{t.apart.service.tag}</span>
+        <p>{t.apart.service.body}</p>
+      </div>
+    </div>
+    <p class="after">{t.apart.after}</p>
+  </section>
+
+  <section>
+    <SectionHeading kicker={t.books.kicker}>{t.books.heading}</SectionHeading>
+    <p>{t.books.body}</p>
+    <div class="actions"><ButtonLink variant="quiet" href={pathFor(locale, "transparency")}>{t.books.link}</ButtonLink></div>
+  </section>
+</Base>

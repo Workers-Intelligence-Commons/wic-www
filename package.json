@@ -1,0 +1,25 @@
+{
+  "name": "wic-www",
+  "private": true,
+  "license": "AGPL-3.0-or-later",
+  "type": "module",
+  "packageManager": "bun@1.4.5",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "vendor/wic-design-system/packages/*"
+  ],
+  "scripts": {
+    "postinstall": "bun run --filter @workers-intelligence-commons/tokens build && bun run --filter @workers-intelligence-commons/components build",
+    "dev": "bun run --filter @workers-intelligence-commons/www dev",
+    "build": "bun run --filter @workers-intelligence-commons/www build",
+    "check": "bun run --filter './apps/*' check",
+    "licenses": "bun scripts/check-licenses.ts",
+    "test": "bun run --filter ./apps/www test",
+    "ready": "bun run check && bun run test && bun run build && bun run licenses",
+    "deploy": "bun run build && bun run --filter './apps/*' deploy"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

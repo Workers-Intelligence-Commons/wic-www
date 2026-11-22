@@ -1,0 +1,11 @@
+---
+// The h1 of a page without a slogan: a short lowercase credit above the title, like SectionHeading.
+interface Props {
+  kicker: string;
+  title: string;
+}
+const { kicker, title } = Astro.props;
+---
+<header class="page-heading">
+  <h1><span class="aside kicker">{kicker}</span><span class="heading">{title}</span></h1>
+</header>
