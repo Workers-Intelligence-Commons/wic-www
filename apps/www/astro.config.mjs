@@ -9,11 +9,6 @@ export default defineConfig({
   output: "static",
   trailingSlash: "always",
   build: { format: "directory" },
-  i18n: {
-    defaultLocale,
-    locales: [...locales],
-    routing: { prefixDefaultLocale: false },
-  },
   integrations: [
     react(),
     sitemap({

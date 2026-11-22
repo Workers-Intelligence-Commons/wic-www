@@ -8,7 +8,7 @@ The pages use the React components of the [WIC design system](https://github.com
 
 The repository is a Bun workspace.
 
-- `apps/www` is the site. Pages are written once in `src/pages/[...locale]/` and built once per locale: English at the root, French under `/fr/`. The text of every page lives in `src/copy/`, one file per page, with each language side by side; a missing translation is a type error. News posts are Markdown files in `src/content/news/<locale>/`.
+- `apps/www` is the site. Pages are written once in `src/pages/[locale]/` and built once per locale: English under `/en/`, French under `/fr/`. The bare domain sends each visitor to their language, and `public/_redirects` sends the older English addresses, which had no prefix, to `/en/`. The text of every page lives in `src/copy/`, one file per page, with each language side by side; a missing translation is a type error. News posts are Markdown files in `src/content/news/<locale>/`.
 - `apps/www/worker` runs only for `/` and `/lang/*`, every other path being a static file: it sends a visitor arriving at `/` to their browser's language, and remembers a choice made in the language menu in a `lang` cookie.
 - `apps/www-redirect` is a Worker that redirects `www.workers-intelligence-commons.org` to the bare domain.
 - `vendor/wic-design-system` is the design system, as a Git submodule. Its packages join the workspace and are built on install.

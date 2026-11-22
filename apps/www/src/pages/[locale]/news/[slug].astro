@@ -4,14 +4,14 @@ import { PageTitle } from "@workers-intelligence-commons/components";
 import Base from "../../../layouts/Base.astro";
 import { type Locale, locales } from "../../../i18n/locales.ts";
 import { localeOf, postsIn, slugOf, type Post } from "../../../i18n/news.ts";
-import { localeParam, pathFor } from "../../../i18n/routes.ts";
+import { pathFor } from "../../../i18n/routes.ts";
 import { news } from "../../../copy/news.ts";
 import { site } from "../../../data/site.ts";
 
 export async function getStaticPaths() {
   const all = (await Promise.all(locales.map(postsIn))).flat();
   return all.map((post) => ({
-    params: { locale: localeParam(localeOf(post)), slug: slugOf(post) },
+    params: { locale: localeOf(post), slug: slugOf(post) },
     props: {
       post,
       locale: localeOf(post),

@@ -1,0 +1,14 @@
+# English pages used to be served without a prefix. These addresses keep working for links made before.
+/mission/* /en/mission/:splat 301
+/projects/* /en/projects/:splat 301
+/how-we-work/* /en/how-we-work/:splat 301
+/criticism/* /en/criticism/:splat 301
+/governance/* /en/governance/:splat 301
+/constitution/* /en/constitution/:splat 301
+/charter/* /en/charter/:splat 301
+/transparency/* /en/transparency/:splat 301
+/support/* /en/support/:splat 301
+/news/* /en/news/:splat 301
+/contributors/* /en/contributors/:splat 301
+/contact/* /en/contact/:splat 301
+/legal/* /en/legal/:splat 301

@@ -29,7 +29,8 @@ const image = new URL("/og.png", site.url).href;
 <meta name="description" content={description} />
 {noindex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonical} />}
 {alternates.map((l) => <link rel="alternate" hreflang={localeTags[l].lang} href={new URL(pathFor(l, page), site.url).href} />)}
-{alternates.includes("en") && <link rel="alternate" hreflang="x-default" href={new URL(pathFor("en", page), site.url).href} />}
+{/* The bare domain picks the visitor's language, so it is the default for the home page. */}
+{alternates.includes("en") && <link rel="alternate" hreflang="x-default" href={new URL(page === "" ? "/" : pathFor("en", page), site.url).href} />}
 <meta property="og:site_name" content={site.name} />
 <meta property="og:type" content={type} />
 <meta property="og:title" content={fullTitle} />

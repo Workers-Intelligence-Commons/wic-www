@@ -13,7 +13,7 @@ Read `README.md` for the layout. These rules apply to every change.
 
 ## Pages
 
-- A new page is a file in `apps/www/src/pages/[...locale]/` using `localePaths`, the `Base` layout and a copy file; add it to the navigation in `copy/ui.ts` when it belongs there.
+- A new page is a file in `apps/www/src/pages/[locale]/` using `localePaths`, the `Base` layout and a copy file; add it to the navigation in `copy/ui.ts` when it belongs there.
 - A page has one `h1`: a `Slogan` (through `SloganText`, since Astro passes slot content to React as HTML) or the design system's `PageTitle`.
 - Do not add client-side JavaScript unless a feature cannot work without it.
 
