@@ -35,7 +35,7 @@ export const transparency: Localized<{
       kicker: "from the draft constitution",
       heading: "What the association will publish",
       items: [
-        "An annual report: accounts, donations, spending, decisions, and the known limits of the model.",
+        "An annual report: accounts, donations, spending, decisions, and the known limits of its intelligences.",
         "The energy used by each training run.",
         "Every salary paid, once there are any.",
         "Serious incidents and errors, with what was done about them.",
@@ -68,7 +68,7 @@ export const transparency: Localized<{
       kicker: "d'après le brouillon de constitution",
       heading: "Ce que l'association publiera",
       items: [
-        "Un rapport annuel : comptes, dons, dépenses, décisions et limites connues du modèle.",
+        "Un rapport annuel : comptes, dons, dépenses, décisions et limites connues de ses intelligences.",
         "L'énergie consommée par chaque entraînement.",
         "Chaque rémunération versée, quand il y en aura.",
         "Les incidents et erreurs graves, avec ce qui a été fait.",

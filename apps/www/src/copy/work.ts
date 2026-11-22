@@ -18,9 +18,9 @@ export const work: Localized<{
     title: "How we work",
     description:
       "How Workers' Intelligence Commons builds its AI: sources with clear licenses and named decisions, training kept to what is needed, fair work for the people who build it, and its own tools.",
-    lead: "A tool that claims to serve workers has to be made in a way workers could accept. These are the rules the project holds itself to, from the texts it learns from to the people who do the work.",
+    lead: "A tool that claims to serve workers has to be made in a way workers could accept. These are the rules the project holds itself to, from what its intelligences learn from to the people who do the work.",
     summary: [
-      { title: "Sources", body: "Every text traced, licensed, and admitted by a named person.", href: "#sources" },
+      { title: "Sources", body: "Every source traced, with a clear right of use, admitted by a named person.", href: "#sources" },
       { title: "Training", body: "Small first, measured, and never more than needed.", href: "#training" },
       { title: "People", body: "No hidden unpaid work, no underpaid labelling, credit for all.", href: "#people" },
     ],
@@ -28,14 +28,14 @@ export const work: Localized<{
       {
         id: "sources",
         heading: "Every source is traced",
-        intro: "What a model learns from decides what it is. So every text that enters the corpus is documented, and the record is public.",
+        intro: "What an intelligence learns from decides what it is. Whatever its form, text, images, sound or anything else, every source is documented, and the record is public.",
         points: [
-          "A text enters only when its license clearly allows the model to be published under the AGPL. When in doubt, it stays out.",
-          "Every decision to admit or refuse a text carries the declared name of the person who made it. A text trains only when someone admitted it and nobody refused it.",
+          "A source enters only when its right of use clearly allows what is trained on it to be published under the copyleft. When in doubt, it stays out.",
+          "Every decision to admit or refuse a source carries the declared name of the person who made it. A source trains only when someone admitted it and nobody refused it.",
           "When an author says their work should not be used for training, that wish is honoured.",
-          "Erasure on request: an admitted request removes the passage from the depot, and every later corpus is built without it.",
+          "Erasure on request: an admitted request removes the passage, and every later training is done without it.",
           "No distillation. Models are trained from scratch, with no output of another company's model in the data and no existing base model.",
-          "Provenance travels with the model: every model folder names each text it learned from, with its credit and license.",
+          "Provenance travels with every model: it names each source it learned from, with its credit and license.",
         ],
       },
       {
@@ -43,10 +43,9 @@ export const work: Localized<{
         heading: "Training takes only what it needs",
         intro: "Compute and energy are shared resources. A common model is not worth wasting them.",
         points: [
-          "The first model is small. Larger ones come only when the smaller ones have shown what works.",
-          "No run trains beyond what is necessary, and the energy each training run uses is published.",
+          "Every intelligence starts small. Larger ones come only when the smaller ones have shown what works.",
+          "No run trains beyond what is necessary. What each training costs the planet is measured and published, starting with energy.",
           "Recipes and checkpoints are published, so others can continue from them at their own scale instead of training the same thing again.",
-          "Free public compute for open research is preferred to buying hardware.",
         ],
       },
       {
@@ -58,7 +57,7 @@ export const work: Localized<{
           "Labelling, moderation and similar tasks are never handed to badly paid people.",
           "Every contributor is credited, with their agreement, or stays anonymous if they ask.",
           "Employees have a say: they are electors from their first day, and after a month or two they stand by default for election as representatives.",
-          "Every salary is voted by the representatives, without the person concerned voting, and its amount is published.",
+          "Every salary is voted by the representatives, without the person concerned voting, and its amount is published. The highest pay is never more than three times the lowest.",
         ],
       },
       {
@@ -66,8 +65,8 @@ export const work: Localized<{
         heading: "What people write stays theirs",
         intro: "Using a tool should not mean feeding it.",
         points: [
-          "What people write to the association's services is not used to train the model.",
-          "The only exception is a separate contributor mode: a document the person signs, and a distinct access point that is known to carry that consent.",
+          "What people write to the association's services is not used to train its intelligences.",
+          "The only exception is a separate contributor mode: a document the person signs, and a distinct access point that is known to carry that consent. That consent can be withdrawn.",
         ],
       },
       {
@@ -88,9 +87,9 @@ export const work: Localized<{
     title: "Comment on travaille",
     description:
       "Comment Workers' Intelligence Commons construit son IA : des sources aux licences claires et aux décisions signées, un entraînement limité au nécessaire, un travail juste pour celles et ceux qui la construisent, et ses propres outils.",
-    lead: "Un outil qui prétend servir les travailleurs doit être fabriqué d'une façon que les travailleurs pourraient accepter. Voici les règles que le projet s'impose, des textes dont il apprend jusqu'aux personnes qui font le travail.",
+    lead: "Un outil qui prétend servir les travailleurs doit être fabriqué d'une façon que les travailleurs pourraient accepter. Voici les règles que le projet s'impose, de ce dont ses intelligences apprennent jusqu'aux personnes qui font le travail.",
     summary: [
-      { title: "Sources", body: "Chaque texte tracé, sous licence claire, admis par une personne nommée.", href: "#sources" },
+      { title: "Sources", body: "Chaque source tracée, avec un droit d'usage clair, admise par une personne nommée.", href: "#sources" },
       { title: "Entraînement", body: "Petit d'abord, mesuré, et jamais plus que nécessaire.", href: "#training" },
       { title: "Personnes", body: "Pas de travail gratuit caché, pas d'annotation sous-payée, du crédit pour tous.", href: "#people" },
     ],
@@ -98,14 +97,14 @@ export const work: Localized<{
       {
         id: "sources",
         heading: "Chaque source est tracée",
-        intro: "Ce dont un modèle apprend décide de ce qu'il est. Chaque texte qui entre dans le corpus est donc documenté, et le registre est public.",
+        intro: "Ce dont une intelligence apprend décide de ce qu'elle est. Quelle que soit sa forme, textes, images, sons ou autre chose, chaque source est donc documentée, et le registre est public.",
         points: [
-          "Un texte n'entre que si sa licence permet clairement de publier le modèle sous AGPL. Dans le doute, il reste dehors.",
-          "Chaque décision d'admettre ou de refuser un texte porte le nom déclaré de la personne qui l'a prise. Un texte ne sert à l'entraînement que si quelqu'un l'a admis et que personne ne l'a refusé.",
+          "Une source n'entre que si son droit d'usage permet clairement de publier sous copyleft ce qui en est appris. Dans le doute, elle reste dehors.",
+          "Chaque décision d'admettre ou de refuser une source porte le nom déclaré de la personne qui l'a prise. Une source ne sert à l'entraînement que si quelqu'un l'a admise et que personne ne l'a refusée.",
           "Quand un auteur dit que son œuvre ne doit pas servir à l'entraînement, ce souhait est respecté.",
-          "Effacement sur demande : une demande admise retire le passage du dépôt de textes, et tous les corpus suivants sont construits sans lui.",
+          "Effacement sur demande : une demande admise retire le passage, et tous les entraînements suivants se font sans lui.",
           "Pas de distillation. Les modèles sont entraînés de zéro, sans aucune sortie du modèle d'une autre entreprise dans les données et sans modèle de base existant.",
-          "La provenance voyage avec le modèle : chaque dossier de modèle nomme chaque texte dont il a appris, avec son crédit et sa licence.",
+          "La provenance voyage avec chaque modèle : il nomme chaque source dont il a appris, avec son crédit et sa licence.",
         ],
       },
       {
@@ -113,10 +112,9 @@ export const work: Localized<{
         heading: "L'entraînement ne prend que ce qu'il faut",
         intro: "Le calcul et l'énergie sont des ressources partagées. Un modèle commun ne vaut pas qu'on les gaspille.",
         points: [
-          "Le premier modèle est petit. Les plus grands ne viennent que quand les petits ont montré ce qui marche.",
-          "Aucun entraînement ne va au-delà du nécessaire, et l'énergie consommée par chacun est publiée.",
+          "Chaque intelligence commence petite. Les plus grandes ne viennent que quand les petites ont montré ce qui marche.",
+          "Aucun entraînement ne va au-delà du nécessaire. Ce que chacun coûte à la planète est mesuré et publié, à commencer par l'énergie.",
           "Les recettes et les checkpoints sont publiés, pour que d'autres puissent repartir de là à leur échelle au lieu d'entraîner la même chose une seconde fois.",
-          "Le calcul public gratuit pour la recherche ouverte passe avant l'achat de matériel.",
         ],
       },
       {
@@ -128,7 +126,7 @@ export const work: Localized<{
           "L'annotation, la modération et les tâches semblables ne sont jamais confiées à des personnes mal payées.",
           "Chaque contributeur est crédité, avec son accord, ou reste anonyme s'il le demande.",
           "Les salariés ont voix au chapitre : ils sont électeurs dès leur premier jour et, après un ou deux mois, candidats par défaut pour devenir représentants.",
-          "Chaque rémunération est votée par les représentants, sans que la personne concernée vote, et son montant est publié.",
+          "Chaque rémunération est votée par les représentants, sans que la personne concernée vote, et son montant est publié. La plus haute ne dépasse jamais trois fois la plus basse.",
         ],
       },
       {
@@ -136,8 +134,8 @@ export const work: Localized<{
         heading: "Ce que les gens écrivent leur appartient",
         intro: "Utiliser un outil ne devrait pas vouloir dire le nourrir.",
         points: [
-          "Ce que les gens écrivent aux services de l'association ne sert pas à entraîner le modèle.",
-          "Seule exception, un mode contributeur séparé : un document que la personne signe, et un point d'accès distinct dont on sait que l'accord a été donné.",
+          "Ce que les gens écrivent aux services de l'association ne sert pas à entraîner ses intelligences.",
+          "Seule exception, un mode contributeur séparé : un document que la personne signe, et un point d'accès distinct dont on sait que l'accord a été donné. Cet accord peut être retiré.",
         ],
       },
       {

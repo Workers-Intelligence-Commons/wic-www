@@ -1,8 +1,8 @@
 ---
-import { PageTitle, SectionHeading } from "@workers-intelligence-commons/components";
+import { ButtonLink, PageTitle, SectionHeading } from "@workers-intelligence-commons/components";
 import Base from "../../layouts/Base.astro";
 import type { Locale } from "../../i18n/locales.ts";
-import { localePaths } from "../../i18n/routes.ts";
+import { localePaths, pathFor } from "../../i18n/routes.ts";
 import { mission } from "../../copy/mission.ts";
 
 export const getStaticPaths = localePaths;
@@ -20,4 +20,9 @@ const t = mission[locale];
     </section>
   ))}
   </div>
+
+  <section>
+    <p>{t.critiques.body}</p>
+    <div class="actions"><ButtonLink variant="ink" href={pathFor(locale, "criticism")}>{t.critiques.link}</ButtonLink></div>
+  </section>
 </Base>

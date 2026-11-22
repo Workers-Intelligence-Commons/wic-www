@@ -20,7 +20,7 @@ export const governance: Localized<{ title: string; description: string; lead: s
         heading: "A constitution",
         paragraphs: [
           "The association is governed by a constitution that sets the principles it acts within. A decision, by the president or by the representatives, is valid only if it respects it. The constitution explains its reasons, so that whoever interprets it can judge cases nobody foresaw.",
-          "At the very least it holds that published models are public under a strong copyleft, that no profit is distributed to investors or to the people who run the association, that the budget, the donations and the support in kind are public, and that training sources are traced with their license and credit, a doubtful source being refused.",
+          "It starts from equality: all human beings are free and equal in dignity and in rights. Its mission is that artificial intelligence belongs to everyone and serves to abolish exploitation, domination and oppression. It also holds that what the association publishes is open under a strong copyleft, that no profit goes to investors or to the people who run it, that the budget, the donations and the support in kind are public, and that whatever its intelligences learn from is traced, a doubtful source being refused.",
         ],
       },
       {
@@ -41,7 +41,7 @@ export const governance: Localized<{ title: string; description: string; lead: s
       {
         heading: "Money and salaries",
         paragraphs: [
-          "No member and no officer receives a share of the profits or a claim on the assets. Surpluses go to the mission. Salaries are possible for real work, within the limits French law sets for non-profit management. Each one is voted by two thirds of the representatives, without the person concerned voting, and its amount is published.",
+          "No member and no officer receives a share of the profits or a claim on the assets. Surpluses go to the mission. Salaries are possible for real work, within the limits French law sets for non-profit management. Each one is voted by two thirds of the representatives, without the person concerned voting, and its amount is published. The highest pay in the association is never more than three times the lowest.",
           "If the association is dissolved, its assets go to another non-profit with a close purpose, never to a member.",
         ],
       },
@@ -67,7 +67,7 @@ export const governance: Localized<{ title: string; description: string; lead: s
         heading: "Une constitution",
         paragraphs: [
           "L'association est régie par une constitution qui fixe les principes dans lesquels elle agit. Une décision, du président comme des représentants, n'est valable que si elle la respecte. La constitution donne ses raisons, pour que celles et ceux qui l'interprètent puissent juger les cas que personne n'avait prévus.",
-          "Elle pose au minimum que les modèles publiés sont publics sous un copyleft fort, qu'aucun bénéfice n'est distribué ni à des investisseurs ni aux personnes qui dirigent l'association, que le budget, les dons et les soutiens en nature sont publics, et que les sources d'entraînement sont tracées avec leur licence et leur attribution, une source douteuse étant refusée.",
+          "Elle part de l'égalité : tous les êtres humains sont libres et égaux en dignité et en droits. Sa mission est que l'intelligence artificielle appartienne à tout le monde et serve à abolir l'exploitation, la domination et l'oppression. Elle pose aussi que ce que l'association publie est ouvert sous un copyleft fort, qu'aucun bénéfice ne va à des investisseurs ni aux personnes qui la dirigent, que le budget, les dons et les soutiens en nature sont publics, et que ce dont ses intelligences apprennent est tracé, une source douteuse étant refusée.",
         ],
       },
       {
@@ -88,7 +88,7 @@ export const governance: Localized<{ title: string; description: string; lead: s
       {
         heading: "Argent et rémunérations",
         paragraphs: [
-          "Aucun membre ni dirigeant ne reçoit une part des bénéfices ni un droit sur l'actif. Les excédents vont à la mission. Une rémunération est possible pour un travail réel, dans les limites que la loi fixe à une gestion désintéressée. Chacune est votée aux deux tiers des représentants, sans que la personne concernée vote, et son montant est publié.",
+          "Aucun membre ni dirigeant ne reçoit une part des bénéfices ni un droit sur l'actif. Les excédents vont à la mission. Une rémunération est possible pour un travail réel, dans les limites que la loi fixe à une gestion désintéressée. Chacune est votée aux deux tiers des représentants, sans que la personne concernée vote, et son montant est publié. La rémunération la plus haute de l'association ne dépasse jamais trois fois la plus basse.",
           "Si l'association est dissoute, son actif va à une autre structure non lucrative à l'objet proche, jamais à un membre.",
         ],
       },

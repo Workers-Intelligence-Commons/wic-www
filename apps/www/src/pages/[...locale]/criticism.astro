@@ -1,0 +1,43 @@
+---
+import { Contents, PageTitle, SectionHeading } from "@workers-intelligence-commons/components";
+import Base from "../../layouts/Base.astro";
+import type { Locale } from "../../i18n/locales.ts";
+import { localePaths } from "../../i18n/routes.ts";
+import { criticism } from "../../copy/criticism.ts";
+
+export const getStaticPaths = localePaths;
+const { locale } = Astro.props as { locale: Locale };
+const t = criticism[locale];
+const contents = [
+  { href: "#frame", label: t.frame.heading },
+  ...t.items.map((item) => ({ href: `#${item.id}`, label: item.heading })),
+];
+---
+<Base locale={locale} page="criticism" title={t.title} description={t.description}>
+  <PageTitle>{t.title}</PageTitle>
+  <p class="lead">{t.lead}</p>
+
+  <div class="section"><Contents title={t.contents} items={contents} /></div>
+
+  <section id="frame" class="charter">
+    <SectionHeading>{t.frame.heading}</SectionHeading>
+    {t.frame.paragraphs.map((p) => <p>{p}</p>)}
+  </section>
+
+  {t.items.map((item) => (
+    <section id={item.id} class="charter">
+      <SectionHeading>{item.heading}</SectionHeading>
+      <p class="intro">{item.critique}</p>
+      <div class="apart">
+        <div>
+          <h3>{t.labels.answer}</h3>
+          <p>{item.answer}</p>
+        </div>
+        <div>
+          <h3>{t.labels.open}</h3>
+          <p>{item.open}</p>
+        </div>
+      </div>
+    </section>
+  ))}
+</Base>

@@ -31,8 +31,8 @@ export const support: Localized<{
     description:
       "How to support Workers' Intelligence Commons: compute grants, contributions to the code, and donations once a structure can receive them. What your support pays for, and what it never buys.",
     kicker: "supporting the commons",
-    slogan: "Nothing pays for owning the model",
-    lead: "Training a model costs compute, and compute costs money. This page explains how you can help, and what happens to what you give.",
+    slogan: "Nothing pays for owning the intelligence",
+    lead: "Training an intelligence costs compute, and compute costs money. This page explains how you can help, and what happens to what you give.",
     status:
       "Donations are not open yet. No money goes through a personal account: they will open once a fiscal host or the association can receive them.",
     pays: {
@@ -43,7 +43,7 @@ export const support: Localized<{
         "Storage and hosting for the corpus and the provenance registry.",
         "Infrastructure for a public test service, served without margin.",
       ],
-      after: `Nothing pays for owning the model. It stays under <code>${site.codeLicense}</code>, whatever happens to funding.`,
+      after: `Nothing pays for owning what the association builds. It stays under <code>${site.codeLicense}</code>, whatever happens to funding.`,
     },
     ways: {
       heading: "Ways to give",
@@ -76,7 +76,7 @@ export const support: Localized<{
       service: {
         title: "Paid service",
         tag: "optional",
-        body: "Usage credits for a hosted model, if one opens one day. Self-hosting is always possible, and anyone may offer the model as a paid service too.",
+        body: "Usage credits for a hosted service, if one opens one day. Self-hosting is always possible, and anyone may offer the same service for pay too.",
       },
       after: "Keeping the two apart keeps the project honest about what each euro is for.",
     },
@@ -91,8 +91,8 @@ export const support: Localized<{
     description:
       "Comment soutenir Workers' Intelligence Commons : des heures de calcul, des contributions au code, et des dons quand une structure pourra les recevoir. Ce que paie votre soutien, et ce qu'il n'achète jamais.",
     kicker: "soutenir le commun",
-    slogan: "Rien ne paie pour posséder le modèle",
-    lead: "Entraîner un modèle coûte du calcul, et le calcul coûte de l'argent. Cette page explique comment aider, et ce que devient ce que vous donnez.",
+    slogan: "Rien ne paie pour posséder l'intelligence",
+    lead: "Entraîner une intelligence coûte du calcul, et le calcul coûte de l'argent. Cette page explique comment aider, et ce que devient ce que vous donnez.",
     status:
       "Les dons ne sont pas encore ouverts. Aucun argent ne passe par un compte personnel : ils ouvriront quand un hébergeur fiscal ou l'association pourra les recevoir.",
     pays: {
@@ -103,7 +103,7 @@ export const support: Localized<{
         "Le stockage et l'hébergement du corpus et du registre de provenance.",
         "L'infrastructure d'un service de test public, servi sans marge.",
       ],
-      after: `Rien ne paie pour posséder le modèle. Il reste sous <code>${site.codeLicense}</code>, quoi qu'il arrive au financement.`,
+      after: `Rien ne paie pour posséder ce que l'association construit. Tout reste sous <code>${site.codeLicense}</code>, quoi qu'il arrive au financement.`,
     },
     ways: {
       heading: "Donner",
@@ -136,7 +136,7 @@ export const support: Localized<{
       service: {
         title: "Service payant",
         tag: "facultatif",
-        body: "Des crédits d'usage pour un modèle hébergé, si un tel service ouvre un jour. L'auto-hébergement reste toujours possible, et n'importe qui peut aussi proposer le modèle comme service payant.",
+        body: "Des crédits d'usage pour un service hébergé, si un tel service ouvre un jour. L'auto-hébergement reste toujours possible, et n'importe qui peut aussi proposer le même service contre paiement.",
       },
       after: "Garder les deux séparés, c'est rester honnête sur ce à quoi sert chaque euro.",
     },

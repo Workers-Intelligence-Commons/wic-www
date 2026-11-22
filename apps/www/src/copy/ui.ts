@@ -37,6 +37,7 @@ export const ui: Localized<{
     language: "Language",
     footerNav: [
       { page: "constitution", label: "Constitution" },
+      { page: "criticism", label: "Criticism of AI" },
       { page: "contributors", label: "Contributors" },
       { page: "contact", label: "Contact" },
       { page: "legal", label: "Legal notice" },
@@ -68,6 +69,7 @@ export const ui: Localized<{
     language: "Langue",
     footerNav: [
       { page: "constitution", label: "Constitution" },
+      { page: "criticism", label: "Les critiques de l'IA" },
       { page: "contributors", label: "Contributeurs" },
       { page: "contact", label: "Contact" },
       { page: "legal", label: "Mentions légales" },

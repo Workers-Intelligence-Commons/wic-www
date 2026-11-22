@@ -14,8 +14,8 @@ export const constitution: Localized<{
   en: {
     title: "Constitution",
     description:
-      "The constitution of Workers' Intelligence Commons: the principles every decision of the association must respect, with their reasons. Openness, money, the limits of use, the model, data and work.",
-    lead: "Every decision of the association, by the president or by the representatives, must respect this text. It gives its reasons, so that whoever reads it can judge the cases it did not foresee.",
+      "The constitution of Workers' Intelligence Commons: the principles every decision of the association must respect, with their reasons. Equality, openness, money, limits, the association's intelligences, data and work.",
+    lead: "Every decision of the association, by the president or by the representatives, must respect this text. It sets out principles and their reasons rather than cases, so that whoever reads it can judge what it did not foresee. The statutes hold the governance and the figures, and a charter of intelligences, still being written, holds the concrete cases.",
     statusTitle: "draft",
     status:
       "This text is a draft. It still has to be checked against the law on associations and the legal rules it touches, and it will keep evolving, as a constitution does.",
@@ -27,8 +27,8 @@ export const constitution: Localized<{
   fr: {
     title: "Constitution",
     description:
-      "La constitution de Workers' Intelligence Commons : les principes que toute décision de l'association doit respecter, avec leurs raisons. Ouverture, argent, limites d'usage, modèle, données et travail.",
-    lead: "Toute décision de l'association, du président comme des représentants, doit respecter ce texte. Il donne ses raisons, pour que celles et ceux qui le lisent puissent juger les cas qu'il n'a pas prévus.",
+      "La constitution de Workers' Intelligence Commons : les principes que toute décision de l'association doit respecter, avec leurs raisons. Égalité, ouverture, argent, limites, intelligences de l'association, données et travail.",
+    lead: "Toute décision de l'association, du président comme des représentants, doit respecter ce texte. Il pose des principes et leurs raisons plutôt que des cas, pour que celles et ceux qui le lisent puissent juger ce qu'il n'a pas prévu. Les statuts portent la gouvernance et les chiffres, et une charte des intelligences, encore en cours d'écriture, porte les cas concrets.",
     statusTitle: "brouillon",
     status:
       "Ce texte est un brouillon. Il doit encore être vérifié au regard du droit des associations et des règles de droit qu'il touche, et il continuera d'évoluer, comme toute constitution.",

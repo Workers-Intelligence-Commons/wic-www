@@ -14,14 +14,14 @@ export const home: Localized<{
   en: {
     title: "intelligence as a means of production, in common",
     description:
-      "Workers' Intelligence Commons builds open AI models and the software around them, published under a strong copyleft so they stay a common good. Its first model is WPT.",
+      "Workers' Intelligence Commons builds open artificial intelligence and the software around it, published under a strong copyleft so it stays a common good. Its first projects are WPT, a language model, and Wica, its applications.",
     kicker: "the first principle",
     slogan: "Intelligence is a means of production",
-    lead: "Workers' Intelligence Commons builds artificial intelligence that belongs to everyone, or rather to no one. It trains open models, writes the software that runs them, and publishes all of it under a strong copyleft, so nobody can take the common work and close it.",
+    lead: "Workers' Intelligence Commons builds artificial intelligence that belongs to everyone, or rather to no one, and that serves to undo exploitation, domination and oppression rather than deepen them. It trains open models, writes the software that runs them, and publishes all of it under a strong copyleft, so nobody can take the common work and close it.",
     status:
-      "One person runs the project for now. The association is not founded yet, no donation channel is open, and no WPT checkpoint has been published.",
+      "One person runs the project for now. The association is not founded yet, no donation channel is open, and no model has been published yet.",
     projects: {
-      heading: "A model, its applications, and a look",
+      heading: "The first projects",
       items: [
         { title: "WPT", body: "A language model trained from scratch only on texts whose license is clear.", anchor: "wpt" },
         { title: "Wica", body: "The applications built on it, starting with a chat, the hub.", anchor: "wica" },
@@ -40,14 +40,14 @@ export const home: Localized<{
   fr: {
     title: "l'intelligence comme moyen de production commun",
     description:
-      "Workers' Intelligence Commons construit des modèles d'IA ouverts et les logiciels qui vont avec, publiés sous copyleft fort pour qu'ils restent un bien commun. Son premier modèle s'appelle WPT.",
+      "Workers' Intelligence Commons construit une intelligence artificielle ouverte et les logiciels qui vont avec, publiés sous copyleft fort pour qu'ils restent un bien commun. Ses premiers projets sont WPT, un modèle de langage, et Wica, ses applications.",
     kicker: "le premier principe",
     slogan: "L'intelligence est un moyen de production",
-    lead: "Workers' Intelligence Commons construit une intelligence artificielle qui appartient à tout le monde, ou plutôt à personne. Le projet entraîne des modèles ouverts, écrit les logiciels qui les font tourner et publie le tout sous copyleft fort, pour que personne ne puisse reprendre le travail commun et le fermer.",
+    lead: "Workers' Intelligence Commons construit une intelligence artificielle qui appartient à tout le monde, ou plutôt à personne, et qui sert à défaire l'exploitation, la domination et l'oppression plutôt qu'à les aggraver. Le projet entraîne des modèles ouverts, écrit les logiciels qui les font tourner et publie le tout sous copyleft fort, pour que personne ne puisse reprendre le travail commun et le fermer.",
     status:
-      "Une seule personne porte le projet pour l'instant. L'association n'est pas encore fondée, aucun moyen de faire un don n'est ouvert et aucun checkpoint de WPT n'a été publié.",
+      "Une seule personne porte le projet pour l'instant. L'association n'est pas encore fondée, aucun moyen de faire un don n'est ouvert et aucun modèle n'a encore été publié.",
     projects: {
-      heading: "Un modèle, ses applications et une identité",
+      heading: "Les premiers projets",
       items: [
         { title: "WPT", body: "Un modèle de langage entraîné de zéro, uniquement sur des textes dont la licence est claire.", anchor: "wpt" },
         { title: "Wica", body: "Les applications construites dessus, à commencer par un chat, le hub.", anchor: "wica" },

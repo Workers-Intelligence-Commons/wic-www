@@ -15,8 +15,8 @@ export const projects: Localized<{ title: string; description: string; lead: str
   en: {
     title: "Projects",
     description:
-      "The projects of Workers' Intelligence Commons: WPT, an open language model trained only on clearly licensed text; Wica, its applications; and the WIC design system.",
-    lead: "Three repositories, all public, all under the same copyleft. Each one says plainly what works and what does not yet.",
+      "The first projects of Workers' Intelligence Commons: WPT, an open language model trained only on clearly licensed text; Wica, the applications; and the WIC design system.",
+    lead: "The association works on artificial intelligence in general, whatever its form. These three repositories are its first projects, not its final shape. All are public, all under the same copyleft, and each says plainly what works and what does not yet.",
     items: [
       {
         id: "wpt",
@@ -66,8 +66,8 @@ export const projects: Localized<{ title: string; description: string; lead: str
   fr: {
     title: "Projets",
     description:
-      "Les projets de Workers' Intelligence Commons : WPT, un modèle de langage ouvert entraîné seulement sur des textes aux licences claires ; Wica, ses applications ; et le design system de WIC.",
-    lead: "Trois dépôts, tous publics, tous sous le même copyleft. Chacun dit franchement ce qui marche et ce qui ne marche pas encore.",
+      "Les premiers projets de Workers' Intelligence Commons : WPT, un modèle de langage ouvert entraîné seulement sur des textes aux licences claires ; Wica, les applications ; et le design system de WIC.",
+    lead: "L'association travaille sur l'intelligence artificielle en général, quelle que soit sa forme. Ces trois dépôts sont ses premiers projets, pas sa forme finale. Tous sont publics, tous sous le même copyleft, et chacun dit franchement ce qui marche et ce qui ne marche pas encore.",
     items: [
       {
         id: "wpt",
