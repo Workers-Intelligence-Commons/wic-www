@@ -1,0 +1,44 @@
+---
+import { ButtonLink, Contents, Notice, PageTitle, SectionHeading } from "@workers-intelligence-commons/components";
+import Base from "../../layouts/Base.astro";
+import type { Locale } from "../../i18n/locales.ts";
+import { localePaths, pathFor } from "../../i18n/routes.ts";
+import { constitution } from "../../copy/constitution.ts";
+import { constitutionText } from "../../copy/constitution-text.ts";
+
+export const getStaticPaths = localePaths;
+const { locale } = Astro.props as { locale: Locale };
+const t = constitution[locale];
+const text = constitutionText[locale];
+const contents = [
+  { href: "#preamble", label: text.preamble.title },
+  ...text.parts.map((part) => ({ href: `#${part.id}`, label: `${part.label}. ${part.title}` })),
+];
+---
+<Base locale={locale} page="constitution" title={t.title} description={t.description}>
+  <PageTitle>{t.title}</PageTitle>
+  <p class="lead">{t.lead}</p>
+  <div class="notice-row"><Notice title={t.statusTitle}>{t.status}</Notice></div>
+  {t.translation && <p class="aside">{t.translation} <a href={pathFor("fr", "constitution")} hreflang="fr" lang="fr">Version française</a></p>}
+
+  <div class="section"><Contents title={t.contents} items={contents} /></div>
+
+  <section id="preamble" class="charter">
+    <SectionHeading>{text.preamble.title}</SectionHeading>
+    {text.preamble.paragraphs.map((p) => <p>{p}</p>)}
+  </section>
+
+  {text.parts.map((part) => (
+    <section id={part.id} class="charter">
+      <SectionHeading kicker={part.label}>{part.title}</SectionHeading>
+      {part.articles.map((article) => (
+        <article id={`article-${article.n}`} class="article">
+          <h3><a class="article-n" href={`#article-${article.n}`} aria-label={`${t.article} ${article.n}`}>{article.n}</a><span>{article.title}</span></h3>
+          {article.paragraphs.map((p) => <p>{p}</p>)}
+        </article>
+      ))}
+    </section>
+  ))}
+
+  <div class="actions section"><ButtonLink variant="quiet" href={pathFor(locale, "governance")}>{t.back}</ButtonLink></div>
+</Base>

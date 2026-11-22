@@ -1,10 +1,9 @@
 import type { Localized } from "../i18n/locales.ts";
 
-export const news: Localized<{ title: string; description: string; kicker: string; lead: string; empty: string; rss: string; back: string; dateFormat: Intl.DateTimeFormatOptions }> = {
+export const news: Localized<{ title: string; description: string; lead: string; empty: string; rss: string; back: string; dateFormat: Intl.DateTimeFormatOptions }> = {
   en: {
     title: "News",
     description: "News from Workers' Intelligence Commons: the association, WPT and its applications.",
-    kicker: "from the workshop",
     lead: "What changed, what was decided, what is still missing.",
     empty: "No news yet.",
     rss: "RSS feed",
@@ -14,7 +13,6 @@ export const news: Localized<{ title: string; description: string; kicker: strin
   fr: {
     title: "Actualités",
     description: "Les actualités de Workers' Intelligence Commons : l'association, WPT et ses applications.",
-    kicker: "depuis l'atelier",
     lead: "Ce qui a changé, ce qui a été décidé, ce qui manque encore.",
     empty: "Pas encore d'actualité.",
     rss: "Flux RSS",

@@ -1,9 +1,8 @@
 ---
-import { Notice, SectionHeading } from "@workers-intelligence-commons/components";
-import PageHeading from "../../components/PageHeading.astro";
+import { ButtonLink, Notice, PageTitle, SectionHeading } from "@workers-intelligence-commons/components";
 import Base from "../../layouts/Base.astro";
 import type { Locale } from "../../i18n/locales.ts";
-import { localePaths } from "../../i18n/routes.ts";
+import { localePaths, pathFor } from "../../i18n/routes.ts";
 import { governance } from "../../copy/governance.ts";
 
 export const getStaticPaths = localePaths;
@@ -11,12 +10,13 @@ const { locale } = Astro.props as { locale: Locale };
 const t = governance[locale];
 ---
 <Base locale={locale} page="governance" title={t.title} description={t.description}>
-  <PageHeading kicker={t.kicker} title={t.title} />
+  <PageTitle>{t.title}</PageTitle>
   <p class="lead">{t.lead}</p>
   <div class="notice-row"><Notice title={t.statusTitle}>{t.status}</Notice></div>
+  <div class="actions"><ButtonLink variant="primary" href={pathFor(locale, "constitution")}>{t.constitutionLink}</ButtonLink></div>
   {t.blocks.map((b) => (
     <section>
-      <SectionHeading kicker={b.kicker}>{b.heading}</SectionHeading>
+      <SectionHeading>{b.heading}</SectionHeading>
       {b.paragraphs.map((text) => <p>{text}</p>)}
     </section>
   ))}

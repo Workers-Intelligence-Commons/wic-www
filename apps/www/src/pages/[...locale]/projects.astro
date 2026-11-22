@@ -1,6 +1,5 @@
 ---
-import { ButtonLink, Mark, SectionHeading } from "@workers-intelligence-commons/components";
-import PageHeading from "../../components/PageHeading.astro";
+import { ButtonLink, Mark, PageTitle, SectionHeading } from "@workers-intelligence-commons/components";
 import Base from "../../layouts/Base.astro";
 import type { Locale } from "../../i18n/locales.ts";
 import { localePaths } from "../../i18n/routes.ts";
@@ -19,12 +18,12 @@ const jsonLd = t.items.map((p) => ({
 }));
 ---
 <Base locale={locale} page="projects" title={t.title} description={t.description} jsonLd={jsonLd}>
-  <PageHeading kicker={t.kicker} title={t.title} />
+  <PageTitle>{t.title}</PageTitle>
   <p class="lead">{t.lead}</p>
   {t.items.map((p) => (
     <section id={p.id}>
       {p.mark && <Mark name={p.mark} height={40} />}
-      <SectionHeading kicker={p.kicker}>{p.name}</SectionHeading>
+      <SectionHeading>{p.name}</SectionHeading>
       {p.paragraphs.map((text) => <p>{text}</p>)}
       <table class="ledger">
         <tbody>

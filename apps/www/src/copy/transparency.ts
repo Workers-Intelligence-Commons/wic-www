@@ -3,10 +3,9 @@ import type { Localized } from "../i18n/locales.ts";
 export const transparency: Localized<{
   title: string;
   description: string;
-  kicker: string;
   lead: string;
   status: string;
-  money: { kicker: string; heading: string; rows: { label: string; value: string }[] };
+  money: { heading: string; rows: { label: string; value: string }[] };
   inKind: { kicker: string; heading: string; body: string; empty: string; columns: { date: string; giver: string; what: string; use: string }; anonymous: string };
   promises: { kicker: string; heading: string; items: string[] };
 }> = {
@@ -14,11 +13,9 @@ export const transparency: Localized<{
     title: "Transparency",
     description:
       "The open books of Workers' Intelligence Commons: money and compute received and spent, the register of gifts in kind, and what the association commits to publish.",
-    kicker: "open books",
     lead: "The budget, the donations and the support in kind are public. This page is where they are kept.",
     status: "Nothing has been received yet, because no donation channel is open. The tables below start empty.",
     money: {
-      kicker: "in euros",
       heading: "Money",
       rows: [
         { label: "received", value: "0 €" },
@@ -49,11 +46,9 @@ export const transparency: Localized<{
     title: "Transparence",
     description:
       "Les comptes ouverts de Workers' Intelligence Commons : argent et calcul reçus et dépensés, registre des dons en nature, et ce que l'association s'engage à publier.",
-    kicker: "comptes ouverts",
     lead: "Le budget, les dons et les soutiens en nature sont publics. C'est sur cette page qu'ils sont tenus.",
     status: "Rien n'a encore été reçu, puisqu'aucun moyen de faire un don n'est ouvert. Les tableaux ci-dessous partent de zéro.",
     money: {
-      kicker: "en euros",
       heading: "Argent",
       rows: [
         { label: "reçu", value: "0 €" },

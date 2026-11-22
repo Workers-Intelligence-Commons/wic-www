@@ -7,9 +7,9 @@ export const home: Localized<{
   slogan: string;
   lead: string;
   status: string;
-  projects: { kicker: string; heading: string; body: string; link: string };
-  help: { kicker: string; heading: string; body: string; support: string; contribute: string };
-  news: { kicker: string; heading: string; all: string };
+  projects: { heading: string; items: { title: string; body: string; anchor: string }[]; link: string };
+  help: { heading: string; body: string; support: string; contribute: string };
+  news: { heading: string; all: string };
 }> = {
   en: {
     title: "intelligence as a means of production, in common",
@@ -21,19 +21,21 @@ export const home: Localized<{
     status:
       "One person runs the project for now. The association is not founded yet, no donation channel is open, and no WPT checkpoint has been published.",
     projects: {
-      kicker: "what is being built",
       heading: "A model, its applications, and a look",
-      body: "WPT is a language model trained from scratch only on texts whose license is clear. Wica holds the applications built on it, starting with a chat. The design system gives all of them the same cut-paper look.",
+      items: [
+        { title: "WPT", body: "A language model trained from scratch only on texts whose license is clear.", anchor: "wpt" },
+        { title: "Wica", body: "The applications built on it, starting with a chat, the hub.", anchor: "wica" },
+        { title: "Design system", body: "The cut-paper look every site and application shares.", anchor: "design-system" },
+      ],
       link: "See the projects",
     },
     help: {
-      kicker: "how to help",
       heading: "Compute, work, and later money",
       body: "Training costs compute, and compute costs money. Donations will open once there is a structure that can receive them without going through a personal account. Until then, compute grants and contributions to the code are what helps most.",
       support: "Ways to support",
       contribute: "Read the code",
     },
-    news: { kicker: "latest", heading: "News", all: "All news" },
+    news: { heading: "News", all: "All news" },
   },
   fr: {
     title: "l'intelligence comme moyen de production commun",
@@ -45,18 +47,20 @@ export const home: Localized<{
     status:
       "Une seule personne porte le projet pour l'instant. L'association n'est pas encore fondée, aucun moyen de faire un don n'est ouvert et aucun checkpoint de WPT n'a été publié.",
     projects: {
-      kicker: "ce qui se construit",
       heading: "Un modèle, ses applications et une identité",
-      body: "WPT est un modèle de langage entraîné de zéro, uniquement sur des textes dont la licence est claire. Wica regroupe les applications construites dessus, à commencer par un chat. Le design system leur donne à toutes le même air de papier découpé.",
+      items: [
+        { title: "WPT", body: "Un modèle de langage entraîné de zéro, uniquement sur des textes dont la licence est claire.", anchor: "wpt" },
+        { title: "Wica", body: "Les applications construites dessus, à commencer par un chat, le hub.", anchor: "wica" },
+        { title: "Design system", body: "L'air de papier découpé que partagent tous les sites et applications.", anchor: "design-system" },
+      ],
       link: "Voir les projets",
     },
     help: {
-      kicker: "comment aider",
       heading: "Du calcul, du travail, et plus tard de l'argent",
       body: "Entraîner un modèle coûte du calcul, et le calcul coûte de l'argent. Les dons ouvriront quand une structure pourra les recevoir sans passer par un compte personnel. D'ici là, ce qui aide le plus, ce sont des heures de calcul et des contributions au code.",
       support: "Les façons de soutenir",
       contribute: "Lire le code",
     },
-    news: { kicker: "dernières nouvelles", heading: "Actualités", all: "Toutes les actualités" },
+    news: { heading: "Actualités", all: "Toutes les actualités" },
   },
 };

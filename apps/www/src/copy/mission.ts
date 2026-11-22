@@ -1,21 +1,19 @@
 import type { Localized } from "../i18n/locales.ts";
 
 export interface Principle {
-  kicker: string;
+  kicker?: string;
   heading: string;
   paragraphs: string[];
 }
 
-export const mission: Localized<{ title: string; description: string; kicker: string; lead: string; principles: Principle[] }> = {
+export const mission: Localized<{ title: string; description: string; lead: string; principles: Principle[] }> = {
   en: {
     title: "Mission",
     description:
       "Why Workers' Intelligence Commons exists: artificial intelligence as a means of production that belongs to everyone, kept open by copyleft and built on sources with clear licenses.",
-    kicker: "why this exists",
     lead: "The association exists so that artificial intelligence belongs to everyone. The principles below come from its draft constitution, which explains its reasons rather than only stating rules.",
     principles: [
       {
-        kicker: "the starting point",
         heading: "Intelligence is a means of production",
         paragraphs: [
           "Artificial intelligence is a tool, like a machine in a workshop. It can help people understand and learn, create, lighten their work, protect themselves and organise. A tool that matters this much should not belong to a handful of companies.",
@@ -23,7 +21,6 @@ export const mission: Localized<{ title: string; description: string; kicker: st
         ],
       },
       {
-        kicker: "the ratchet",
         heading: "Copyleft keeps the commons open",
         paragraphs: [
           "Everything the association publishes is under a strong copyleft: today <code>AGPL-3.0-or-later</code>. Anyone who improves a model and serves it to the public has to publish their changes, so every improvement falls back into the common pot.",
@@ -39,7 +36,6 @@ export const mission: Localized<{ title: string; description: string; kicker: st
         ],
       },
       {
-        kicker: "what is paid for",
         heading: "The service is sold, never the intelligence",
         paragraphs: [
           "Hosting a model costs money, and a paid service may one day cover that cost. What it sells is reliability, limits, support and infrastructure. The model itself stays free, self-hosting stays possible, and anyone may serve it too, for money if they like. That keeps prices honest.",
@@ -47,7 +43,6 @@ export const mission: Localized<{ title: string; description: string; kicker: st
         ],
       },
       {
-        kicker: "a position",
         heading: "The gains of automation belong to workers",
         paragraphs: [
           "Automation of work will happen. The association does not try to stop it. It argues that what automation gains should go to the people who work rather than to those who own the capital.",
@@ -59,11 +54,9 @@ export const mission: Localized<{ title: string; description: string; kicker: st
     title: "Mission",
     description:
       "Pourquoi Workers' Intelligence Commons existe : une intelligence artificielle qui appartient à tout le monde, gardée ouverte par le copyleft et construite sur des sources aux licences claires.",
-    kicker: "pourquoi ce projet existe",
     lead: "L'association existe pour que l'intelligence artificielle appartienne à tout le monde. Les principes ci-dessous viennent du brouillon de sa constitution, qui donne ses raisons au lieu de seulement poser des règles.",
     principles: [
       {
-        kicker: "le point de départ",
         heading: "L'intelligence est un moyen de production",
         paragraphs: [
           "L'intelligence artificielle est un outil, comme une machine dans un atelier. Elle peut aider à comprendre et apprendre, à créer, à alléger le travail, à se protéger et à s'organiser. Un outil aussi important ne devrait pas appartenir à une poignée d'entreprises.",
@@ -71,7 +64,6 @@ export const mission: Localized<{ title: string; description: string; kicker: st
         ],
       },
       {
-        kicker: "le cliquet",
         heading: "Le copyleft garde le commun ouvert",
         paragraphs: [
           "Tout ce que l'association publie est sous copyleft fort, aujourd'hui <code>AGPL-3.0-or-later</code>. Quiconque améliore un modèle et le sert au public doit publier ses modifications, si bien que chaque amélioration retombe dans le pot commun.",
@@ -87,7 +79,6 @@ export const mission: Localized<{ title: string; description: string; kicker: st
         ],
       },
       {
-        kicker: "ce qui se paie",
         heading: "On vend le service, jamais l'intelligence",
         paragraphs: [
           "Héberger un modèle coûte de l'argent, et un service payant pourra un jour couvrir ce coût. Ce qu'il vend, c'est la fiabilité, des limites d'usage, du support et de l'infrastructure. Le modèle reste libre, l'auto-hébergement reste possible, et n'importe qui peut le servir aussi, y compris contre paiement. C'est ce qui garde les prix honnêtes.",
@@ -95,7 +86,6 @@ export const mission: Localized<{ title: string; description: string; kicker: st
         ],
       },
       {
-        kicker: "une position",
         heading: "Les gains de l'automatisation reviennent aux travailleurs",
         paragraphs: [
           "L'automatisation du travail aura lieu. L'association ne cherche pas à l'empêcher. Elle défend que ce qu'elle rapporte aille à celles et ceux qui travaillent plutôt qu'à ceux qui possèdent le capital.",

@@ -1,5 +1,5 @@
 ---
-import PageHeading from "../../../components/PageHeading.astro";
+import { PageTitle } from "@workers-intelligence-commons/components";
 import Base from "../../../layouts/Base.astro";
 import type { Locale } from "../../../i18n/locales.ts";
 import { postsIn, slugOf } from "../../../i18n/news.ts";
@@ -13,7 +13,7 @@ const posts = await postsIn(locale);
 const date = new Intl.DateTimeFormat(locale, t.dateFormat);
 ---
 <Base locale={locale} page="news" title={t.title} description={t.description}>
-  <PageHeading kicker={t.kicker} title={t.title} />
+  <PageTitle>{t.title}</PageTitle>
   <p class="lead">{t.lead}</p>
   {posts.length === 0 ? <p class="empty">{t.empty}</p> : (
     <ul class="posts">

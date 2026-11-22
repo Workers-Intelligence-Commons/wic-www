@@ -1,5 +1,5 @@
 ---
-import { ButtonLink, Notice, SectionHeading } from "@workers-intelligence-commons/components";
+import { ButtonLink, Notice, SectionHeading, Sheet } from "@workers-intelligence-commons/components";
 import SloganText from "../../components/SloganText.tsx";
 import Base from "../../layouts/Base.astro";
 import { ui } from "../../copy/ui.ts";
@@ -36,13 +36,19 @@ const jsonLd = [
   <div class="notice-row"><Notice title={ui[locale].honestStatus}>{t.status}</Notice></div>
 
   <section>
-    <SectionHeading kicker={t.projects.kicker}>{t.projects.heading}</SectionHeading>
-    <p>{t.projects.body}</p>
+    <SectionHeading>{t.projects.heading}</SectionHeading>
+    <div class="sheets sheets-row">
+      {t.projects.items.map((item, i) => (
+        <Sheet tone={(["red", "ochre", "ink"] as const)[i % 3]} title={item.title}>
+          <p><a href={pathFor(locale, "projects") + "#" + item.anchor}>{item.body}</a></p>
+        </Sheet>
+      ))}
+    </div>
     <div class="actions"><ButtonLink variant="ink" href={pathFor(locale, "projects")}>{t.projects.link}</ButtonLink></div>
   </section>
 
   <section>
-    <SectionHeading kicker={t.help.kicker}>{t.help.heading}</SectionHeading>
+    <SectionHeading>{t.help.heading}</SectionHeading>
     <p>{t.help.body}</p>
     <div class="actions">
       <ButtonLink variant="primary" href={pathFor(locale, "support")}>{t.help.support}</ButtonLink>
@@ -51,7 +57,7 @@ const jsonLd = [
   </section>
 
   <section>
-    <SectionHeading kicker={t.news.kicker}>{t.news.heading}</SectionHeading>
+    <SectionHeading>{t.news.heading}</SectionHeading>
     <ul class="posts">
       {latest.map((post) => (
         <li>

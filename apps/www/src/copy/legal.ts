@@ -1,11 +1,10 @@
 import type { Localized } from "../i18n/locales.ts";
 import { site } from "../data/site.ts";
 
-export const legal: Localized<{ title: string; description: string; kicker: string; blocks: { heading: string; paragraphs: string[] }[] }> = {
+export const legal: Localized<{ title: string; description: string; blocks: { heading: string; paragraphs: string[] }[] }> = {
   en: {
     title: "Legal notice",
     description: "Legal notice of the Workers' Intelligence Commons site: publisher, host, personal data and licenses.",
-    kicker: "who publishes, who hosts",
     blocks: [
       {
         heading: "Publisher",
@@ -36,7 +35,6 @@ export const legal: Localized<{ title: string; description: string; kicker: stri
   fr: {
     title: "Mentions légales",
     description: "Mentions légales du site de Workers' Intelligence Commons : éditeur, hébergeur, données personnelles et licences.",
-    kicker: "qui publie, qui héberge",
     blocks: [
       {
         heading: "Éditeur",

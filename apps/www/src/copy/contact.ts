@@ -3,11 +3,10 @@ import { site } from "../data/site.ts";
 
 const mail = `<a href="mailto:${site.contact}">${site.contact}</a>`;
 
-export const contact: Localized<{ title: string; description: string; kicker: string; lead: string; rows: { label: string; value: string }[]; note: string }> = {
+export const contact: Localized<{ title: string; description: string; lead: string; rows: { label: string; value: string }[]; note: string }> = {
   en: {
     title: "Contact",
     description: "How to reach Workers' Intelligence Commons: by email, or through the issues of its public repositories.",
-    kicker: "write",
     lead: "One address for everything: support, compute, licenses, press, erasure requests and security reports.",
     rows: [
       { label: "email", value: mail },
@@ -19,7 +18,6 @@ export const contact: Localized<{ title: string; description: string; kicker: st
   fr: {
     title: "Contact",
     description: "Comment joindre Workers' Intelligence Commons : par e-mail, ou par les issues de ses dépôts publics.",
-    kicker: "écrire",
     lead: "Une seule adresse pour tout : soutien, calcul, licences, presse, demandes d'effacement et signalements de sécurité.",
     rows: [
       { label: "e-mail", value: mail },

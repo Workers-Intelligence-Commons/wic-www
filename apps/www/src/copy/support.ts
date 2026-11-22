@@ -12,7 +12,6 @@ export const support: Localized<{
   status: string;
   pays: { kicker: string; heading: string; items: string[]; after: string };
   ways: {
-    kicker: string;
     heading: string;
     money: { title: string; paragraphs: string[] };
     compute: { title: string; paragraphs: string[] };
@@ -25,7 +24,7 @@ export const support: Localized<{
     service: { title: string; tag: string; body: string };
     after: string;
   };
-  books: { kicker: string; heading: string; body: string; link: string };
+  books: { heading: string; body: string; link: string };
 }> = {
   en: {
     title: "Support",
@@ -47,7 +46,6 @@ export const support: Localized<{
       after: `Nothing pays for owning the model. It stays under <code>${site.codeLicense}</code>, whatever happens to funding.`,
     },
     ways: {
-      kicker: "three ways",
       heading: "Ways to give",
       money: {
         title: "Money",
@@ -83,7 +81,6 @@ export const support: Localized<{
       after: "Keeping the two apart keeps the project honest about what each euro is for.",
     },
     books: {
-      kicker: "open books",
       heading: "Where it goes",
       body: "The transparency page lists money and compute received and spent, and the register of gifts in kind. A donor can ask to stay anonymous.",
       link: "See the transparency page",
@@ -109,7 +106,6 @@ export const support: Localized<{
       after: `Rien ne paie pour posséder le modèle. Il reste sous <code>${site.codeLicense}</code>, quoi qu'il arrive au financement.`,
     },
     ways: {
-      kicker: "trois façons",
       heading: "Donner",
       money: {
         title: "Argent",
@@ -145,7 +141,6 @@ export const support: Localized<{
       after: "Garder les deux séparés, c'est rester honnête sur ce à quoi sert chaque euro.",
     },
     books: {
-      kicker: "comptes ouverts",
       heading: "Où ça va",
       body: "La page transparence liste l'argent et le calcul reçus et dépensés, ainsi que le registre des dons en nature. Un donateur peut demander à rester anonyme.",
       link: "Voir la page transparence",

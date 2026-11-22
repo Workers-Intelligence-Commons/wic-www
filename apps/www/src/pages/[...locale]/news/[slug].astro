@@ -1,5 +1,6 @@
 ---
 import { render } from "astro:content";
+import { PageTitle } from "@workers-intelligence-commons/components";
 import Base from "../../../layouts/Base.astro";
 import { type Locale, locales } from "../../../i18n/locales.ts";
 import { localeOf, postsIn, slugOf, type Post } from "../../../i18n/news.ts";
@@ -41,9 +42,7 @@ const jsonLd = [
 ---
 <Base locale={locale} page={page} title={post.data.title} description={post.data.description} type="article" published={post.data.date} alternates={alternates} jsonLd={jsonLd}>
   <article class="prose">
-    <header class="page-heading">
-      <h1><span class="aside kicker"><time datetime={post.data.date.toISOString().slice(0, 10)}>{date.format(post.data.date)}</time></span><span class="heading">{post.data.title}</span></h1>
-    </header>
+    <PageTitle kicker={date.format(post.data.date)}>{post.data.title}</PageTitle>
     <p class="lead">{post.data.description}</p>
     <Content />
   </article>

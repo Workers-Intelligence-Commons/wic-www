@@ -26,7 +26,7 @@ const t = support[locale];
   </section>
 
   <section>
-    <SectionHeading kicker={t.ways.kicker}>{t.ways.heading}</SectionHeading>
+    <SectionHeading>{t.ways.heading}</SectionHeading>
     <div class="sheets">
       <Sheet tone="red" title={t.ways.money.title}>
         {t.ways.money.paragraphs.map((text) => <p>{text}</p>)}
@@ -62,7 +62,7 @@ const t = support[locale];
   </section>
 
   <section>
-    <SectionHeading kicker={t.books.kicker}>{t.books.heading}</SectionHeading>
+    <SectionHeading>{t.books.heading}</SectionHeading>
     <p>{t.books.body}</p>
     <div class="actions"><ButtonLink variant="quiet" href={pathFor(locale, "transparency")}>{t.books.link}</ButtonLink></div>
   </section>

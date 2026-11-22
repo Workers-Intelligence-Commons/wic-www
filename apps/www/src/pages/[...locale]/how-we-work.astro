@@ -1,0 +1,32 @@
+---
+import { PageTitle, SectionHeading, Sheet } from "@workers-intelligence-commons/components";
+import Base from "../../layouts/Base.astro";
+import type { Locale } from "../../i18n/locales.ts";
+import { localePaths } from "../../i18n/routes.ts";
+import { work } from "../../copy/work.ts";
+
+export const getStaticPaths = localePaths;
+const { locale } = Astro.props as { locale: Locale };
+const t = work[locale];
+const tones = ["red", "ochre", "ink"] as const;
+---
+<Base locale={locale} page="how-we-work" title={t.title} description={t.description}>
+  <PageTitle>{t.title}</PageTitle>
+  <p class="lead">{t.lead}</p>
+
+  <div class="sheets sheets-row">
+    {t.summary.map((item, i) => (
+      <Sheet tone={tones[i % 3]} title={item.title}>
+        <p><a href={item.href}>{item.body}</a></p>
+      </Sheet>
+    ))}
+  </div>
+
+  {t.sections.map((section) => (
+    <section id={section.id} class="charter">
+      <SectionHeading>{section.heading}</SectionHeading>
+      <p class="intro">{section.intro}</p>
+      <ul class="points">{section.points.map((point) => <li>{point}</li>)}</ul>
+    </section>
+  ))}
+</Base>

@@ -32,12 +32,6 @@ h3 { font-weight: 800; font-size: 24px; line-height: 30px; margin: var(--space-6
 .lang-menu li a { display: block; padding: var(--space-1) var(--space-4); text-decoration: none; }
 .lang-menu li a[aria-current="true"] { text-decoration: underline; text-decoration-color: var(--ochre); text-decoration-thickness: 5px; text-underline-offset: 4px; }
 
-/* Page heading */
-.page-heading { margin-bottom: var(--space-8); }
-.page-heading h1 { margin: 0; display: flex; flex-direction: column; gap: var(--space-1); }
-.page-heading .kicker { font-weight: 400; }
-.heading { font-family: var(--font-gothic); font-weight: 800; font-size: 40px; line-height: 46px; color: var(--ink); }
-@media (max-width: 560px) { .heading { font-size: 32px; line-height: 38px; } }
 
 .wic-slogan { margin-bottom: var(--space-6); }
 .lead { font-size: 21px; line-height: 32px; max-width: 34em; margin: 0 0 var(--space-8); }
@@ -83,3 +77,30 @@ main > section, .section { margin-top: var(--space-12); }
 .site-footer { margin-top: var(--space-12); padding-top: var(--space-6); border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: var(--space-3) var(--space-6); align-items: center; }
 .site-footer ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-4); }
 .site-footer p { flex-basis: 100%; margin: 0; max-width: none; }
+
+/* Constitution: article numbers in the margin, cut from paper */
+.charter { scroll-margin-top: var(--space-6); }
+.article { position: relative; margin-top: var(--space-6); scroll-margin-top: var(--space-6); }
+.article h3 { display: flex; align-items: baseline; gap: var(--space-3); margin: 0 0 var(--space-2); }
+.article-n { flex: 0 0 48px; font-family: var(--font-display); font-weight: 400; font-size: 44px; line-height: 1; color: var(--red) !important; text-decoration: none !important; }
+.article:nth-child(3n) .article-n { color: var(--ink) !important; }
+.article p { margin-left: calc(48px + var(--space-3)); }
+@media (max-width: 560px) { .article p { margin-left: 0; } }
+
+/* Sheets side by side on wide screens */
+@media (min-width: 720px) { .sheets-row { grid-template-columns: repeat(3, 1fr); } }
+.sheets-row p { margin-bottom: var(--space-2); }
+
+/* A section's opening sentence, then its points behind cut bars */
+.intro { font-size: 21px; line-height: 32px; }
+.points { list-style: none; padding: 0; margin: var(--space-4) 0 0; display: grid; gap: var(--space-3); }
+.points li { position: relative; padding-left: var(--space-8); }
+.points li::before { content: ""; position: absolute; left: 0; top: 12px; width: 24px; height: 8px; background: var(--ink); clip-path: polygon(0 18%, 100% 0, 99% 82%, 1% 100%); }
+.points li:nth-child(3n+2)::before { background: var(--red); }
+.points li:nth-child(3n)::before { background: var(--ochre); }
+
+/* Numbered principles */
+.numbered { counter-reset: principle; }
+.numbered > section { counter-increment: principle; position: relative; }
+.numbered > section .wic-heading::before { content: counter(principle); display: block; font-family: var(--font-display); font-weight: 400; font-size: 56px; line-height: 1; color: var(--red); margin-bottom: var(--space-2); }
+.numbered > section:nth-child(2n) .wic-heading::before { color: var(--ink); }
