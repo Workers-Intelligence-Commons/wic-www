@@ -14,7 +14,6 @@ const t = ui[Astro.props.locale];
   <Mark name="wic" height={28} />
   <ul>
     {t.footerNav.map((item) => <li><a href={pathFor(Astro.props.locale, item.page)}>{item.label}</a></li>)}
-    <li><a href={site.github}>GitHub</a></li>
     <li><a href={site.repositories.www}>{t.repository}</a></li>
   </ul>
   <p class="aside">{t.footerNote}</p>

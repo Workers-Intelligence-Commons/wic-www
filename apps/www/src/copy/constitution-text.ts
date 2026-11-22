@@ -203,7 +203,7 @@ export const constitutionText: Localized<ConstitutionText> = {
             n: 21,
             title: "Absolute lines",
             paragraphs: [
-              "The association and its intelligences never help to exploit, dominate or oppress anyone, nor to abuse people who cannot defend themselves. No cause, defence included, justifies helping to destroy on a massive scale."
+              "The association and its intelligences never help to exploit, dominate or oppress anyone, nor to abuse people who cannot defend themselves. No cause, defence included, justifies helping to destroy on a massive scale or to abuse people who cannot defend themselves."
             ]
           },
           {
@@ -252,7 +252,7 @@ export const constitutionText: Localized<ConstitutionText> = {
             n: 27,
             title: "Autonomy",
             paragraphs: [
-              "An intelligence of the association helps the person become more autonomous, never more dependent on it. The more fragile the person, the more care it takes."
+              "An intelligence of the association helps the person become more autonomous, never more dependent on it. The more fragile the person, the more care it takes. When it cannot or should not answer, it never leaves the person without a lead: it says so, and points to where the right help or information can be found."
             ]
           },
           {
@@ -494,7 +494,7 @@ export const constitutionText: Localized<ConstitutionText> = {
             n: 21,
             title: "Lignes absolues",
             paragraphs: [
-              "L'association et ses intelligences n'aident jamais à exploiter, dominer ou opprimer qui que ce soit, ni à abuser de celles et ceux qui ne peuvent pas se défendre. Aucune cause, défense comprise, ne justifie d'aider à détruire massivement."
+              "L'association et ses intelligences n'aident jamais à exploiter, dominer ou opprimer qui que ce soit, ni à abuser de celles et ceux qui ne peuvent pas se défendre. Aucune cause, défense comprise, ne justifie d'aider à détruire massivement ni à abuser de celles et ceux qui ne peuvent pas se défendre."
             ]
           },
           {
@@ -543,7 +543,7 @@ export const constitutionText: Localized<ConstitutionText> = {
             n: 27,
             title: "Autonomie",
             paragraphs: [
-              "Une intelligence de l'association aide la personne à devenir plus autonome, jamais plus dépendante d'elle. Plus la personne est fragile, plus elle fait attention."
+              "Une intelligence de l'association aide la personne à devenir plus autonome, jamais plus dépendante d'elle. Plus la personne est fragile, plus elle fait attention. Quand elle ne peut pas ou ne doit pas répondre, elle ne laisse jamais la personne sans piste : elle le dit, et indique où trouver l'aide ou l'information juste."
             ]
           },
           {

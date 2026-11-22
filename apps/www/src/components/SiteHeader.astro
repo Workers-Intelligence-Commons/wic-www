@@ -2,7 +2,7 @@
 import { Mark } from "@workers-intelligence-commons/components";
 import { type Locale, localeNames, localeTags, locales } from "../i18n/locales.ts";
 import { pathFor } from "../i18n/routes.ts";
-import { ui } from "../copy/ui.ts";
+import { type NavGroup, type NavItem, ui } from "../copy/ui.ts";
 
 interface Props {
   locale: Locale;
@@ -14,6 +14,9 @@ const { locale, page, alternates } = Astro.props;
 const t = ui[locale];
 const current = page.split("/")[0];
 // Each choice goes through /lang/<locale>/, which saves it in a cookie and returns to the page.
+const isGroup = (entry: NavItem | NavGroup): entry is NavGroup => "items" in entry;
+// Every menu shares one name, so the browser closes the open one when another opens.
+const menus = "site-menu";
 const choices = locales.map((l) => {
   const target = alternates.includes(l) ? pathFor(l, page) : pathFor(l);
   return { locale: l, href: `/lang/${l}/?to=${encodeURIComponent(target)}` };
@@ -24,7 +27,7 @@ const choices = locales.map((l) => {
     <Mark name="wic" height={28} />
     <span class="aside">workers&rsquo; intelligence commons</span>
   </a>
-  <details class="lang-menu">
+  <details class="lang-menu" name={menus}>
     <summary aria-label={`${t.language}: ${localeNames[locale]}`}>{localeNames[locale]}</summary>
     <ul>
       {choices.map((c) => (
@@ -36,8 +39,19 @@ const choices = locales.map((l) => {
   </details>
   <nav aria-label={t.navLabel}>
     <ul>
-      {t.nav.map((item) => (
-        <li><a href={pathFor(locale, item.page)} aria-current={current === item.page ? "page" : undefined}>{item.label}</a></li>
+      {t.nav.map((entry) => isGroup(entry) ? (
+        <li>
+          <details class="nav-menu" name={menus}>
+            <summary data-current={entry.items.some((item) => item.page === current) ? "true" : undefined}>{entry.label}</summary>
+            <ul>
+              {entry.items.map((item) => (
+                <li><a href={pathFor(locale, item.page)} aria-current={current === item.page ? "page" : undefined}>{item.label}</a></li>
+              ))}
+            </ul>
+          </details>
+        </li>
+      ) : (
+        <li><a href={pathFor(locale, entry.page)} aria-current={current === entry.page ? "page" : undefined}>{entry.label}</a></li>
       ))}
     </ul>
   </nav>

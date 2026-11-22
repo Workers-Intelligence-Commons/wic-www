@@ -62,7 +62,7 @@ export const mission: Localized<{ title: string; description: string; lead: stri
       },
     ],
     critiques: {
-      body: "Most criticism of artificial intelligence from the left is right, and the association takes it seriously.",
+      body: "Most criticism of artificial intelligence is right, and the association takes it seriously.",
       link: "The criticism, one point at a time",
     },
   },
@@ -121,7 +121,7 @@ export const mission: Localized<{ title: string; description: string; lead: stri
       },
     ],
     critiques: {
-      body: "La plupart des critiques que la gauche adresse à l'intelligence artificielle sont justes, et l'association les prend au sérieux.",
+      body: "La plupart des critiques adressées à l'intelligence artificielle sont justes, et l'association les prend au sérieux.",
       link: "Les critiques, une par une",
     },
   },

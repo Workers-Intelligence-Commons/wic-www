@@ -20,17 +20,29 @@ h3 { font-weight: 800; font-size: 24px; line-height: 30px; margin: var(--space-6
 .brand { display: inline-flex; align-items: center; gap: var(--space-3); text-decoration: none; }
 .site-header nav { flex: 1 1 100%; order: 3; }
 .site-header ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-4); max-width: none; }
+.site-header nav > ul > li > a, .nav-menu summary { display: block; line-height: 24px; }
 .site-header nav a { font-family: var(--font-gothic); font-weight: 700; font-size: 16px; line-height: 24px; text-decoration: none; }
 .site-header nav a[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--ochre); text-decoration-thickness: 5px; text-underline-offset: 4px; }
-/* Language menu: a native disclosure, so it works without JavaScript */
-.lang-menu { position: relative; margin-left: auto; font-family: var(--font-gothic); font-weight: 700; font-size: 16px; line-height: 24px; }
-.lang-menu summary { cursor: pointer; list-style: none; padding: var(--space-1) var(--space-2); color: var(--ink-muted); }
-.lang-menu summary::-webkit-details-marker { display: none; }
-.lang-menu summary::after { content: " \25BE"; }
-.lang-menu summary:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
-.lang-menu ul { position: absolute; right: 0; top: 100%; z-index: 5; list-style: none; margin: var(--space-1) 0 0; padding: var(--space-2) 0; min-width: 9em; background: var(--paper-raised); border-top: 4px solid var(--ink); }
-.lang-menu li a { display: block; padding: var(--space-1) var(--space-4); text-decoration: none; }
-.lang-menu li a[aria-current="true"] { text-decoration: underline; text-decoration-color: var(--ochre); text-decoration-thickness: 5px; text-underline-offset: 4px; }
+/* Menus: native disclosures, so they work without JavaScript */
+.lang-menu, .nav-menu { position: relative; font-family: var(--font-gothic); font-weight: 700; font-size: 16px; line-height: 24px; }
+.lang-menu { margin-left: auto; }
+.lang-menu summary, .nav-menu summary { cursor: pointer; list-style: none; }
+.lang-menu summary { padding: var(--space-1) var(--space-2); color: var(--ink-muted); }
+.lang-menu summary::-webkit-details-marker, .nav-menu summary::-webkit-details-marker { display: none; }
+.lang-menu summary::after, .nav-menu summary::after { content: " \25BE"; }
+.lang-menu[open] summary::after, .nav-menu[open] summary::after { content: " \25B4"; }
+.lang-menu summary:focus-visible, .nav-menu summary:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+.nav-menu summary[data-current="true"] { text-decoration: underline; text-decoration-color: var(--ochre); text-decoration-thickness: 5px; text-underline-offset: 4px; }
+.site-header .lang-menu ul, .site-header .nav-menu ul { position: absolute; top: 100%; z-index: 5; display: block; margin: var(--space-1) 0 0; padding: var(--space-2) 0; background: var(--paper-raised); border-top: 4px solid var(--ink); }
+.site-header .lang-menu ul { right: 0; min-width: 9em; }
+.site-header .nav-menu ul { left: calc(-1 * var(--space-4)); min-width: 15em; }
+.lang-menu li a, .nav-menu li a { display: block; padding: var(--space-1) var(--space-4); text-decoration: none; }
+.lang-menu li a[aria-current="true"], .nav-menu li a[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--ochre); text-decoration-thickness: 5px; text-underline-offset: 4px; }
+/* On narrow screens the links wrap, so an open menu takes its own row instead of covering the next one */
+@media (max-width: 719px) {
+  .site-header nav > ul > li:has(.nav-menu[open]) { flex-basis: 100%; }
+  .site-header .nav-menu ul { position: static; margin-top: var(--space-1); }
+}
 
 
 .wic-slogan { margin-bottom: var(--space-6); }

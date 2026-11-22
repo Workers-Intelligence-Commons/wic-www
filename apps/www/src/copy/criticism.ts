@@ -20,13 +20,13 @@ export const criticism: Localized<{
   en: {
     title: "Criticism of AI",
     description:
-      "What the left says against artificial intelligence, one point at a time: stolen work, hidden labour, concentration of power, ecology, jobs, surveillance, bias, fakes, dependence and hype. What Workers' Intelligence Commons does about each, and what it does not solve.",
-    lead: "What the left says against artificial intelligence, one point at a time: where the association agrees, what it does about it, and what remains unsolved.",
+      "The criticism made of artificial intelligence, one point at a time: stolen work, hidden labour, concentration of power, ecology, jobs, surveillance, bias, fakes, dependence and hype. What Workers' Intelligence Commons does about each, and what it does not solve.",
+    lead: "The criticism made of artificial intelligence, one point at a time: where the association agrees, what it does about it, and what remains unsolved.",
     contents: "on this page",
     frame: {
       heading: "Who owns the machine",
       paragraphs: [
-        "Most criticism of artificial intelligence from the left is right. Look closely and it is mostly about who owns it and how it is made, not about the technique itself.",
+        "Most criticism of artificial intelligence is right. Look closely and it is mostly about who owns it and how it is made, not about the technique itself.",
         "The Luddites did not break looms because they hated machines, but because the machines were being used against them. Marx made the same distinction: the problem is not the machine, it is who it belongs to. That is why the association wants to take artificial intelligence back rather than leave it to those who already own it.",
         "Its constitution borrows three words from the sociology of social relations, notably the work of Danièle Kergoat: exploitation, domination and oppression. Each criticism below touches at least one of them. For each, the page says what the association does, and what it does not solve.",
       ],
@@ -108,13 +108,13 @@ export const criticism: Localized<{
   fr: {
     title: "Les critiques de l'IA",
     description:
-      "Ce que la gauche reproche à l'intelligence artificielle, point par point : vol des œuvres, travail caché, concentration du pouvoir, écologie, emploi, surveillance, biais, faux contenus, dépendance et battage. Ce que fait Workers' Intelligence Commons pour chacun, et ce que ça ne résout pas.",
-    lead: "Ce que la gauche reproche à l'intelligence artificielle, point par point : là où l'association est d'accord, ce qu'elle fait, et ce qui reste sans solution.",
+      "Ce qu'on reproche à l'intelligence artificielle, point par point : vol des œuvres, travail caché, concentration du pouvoir, écologie, emploi, surveillance, biais, faux contenus, dépendance et battage. Ce que fait Workers' Intelligence Commons pour chacun, et ce que ça ne résout pas.",
+    lead: "Ce qu'on reproche à l'intelligence artificielle, point par point : là où l'association est d'accord, ce qu'elle fait, et ce qui reste sans solution.",
     contents: "sur cette page",
     frame: {
       heading: "À qui appartient la machine",
       paragraphs: [
-        "La plupart des critiques que la gauche adresse à l'intelligence artificielle sont justes. À y regarder de près, elles portent surtout sur qui la possède et sur la façon dont elle est fabriquée, pas sur la technique elle-même.",
+        "La plupart des critiques adressées à l'intelligence artificielle sont justes. À y regarder de près, elles portent surtout sur qui la possède et sur la façon dont elle est fabriquée, pas sur la technique elle-même.",
         "Les luddites ne cassaient pas les métiers à tisser parce qu'ils détestaient les machines, mais parce que les machines servaient contre eux. Marx faisait la même distinction : le problème n'est pas la machine, c'est à qui elle appartient. C'est pour ça que l'association veut reprendre l'intelligence artificielle plutôt que la laisser à ceux qui la possèdent déjà.",
         "Sa constitution emprunte trois mots à la sociologie des rapports sociaux, notamment aux travaux de Danièle Kergoat : exploitation, domination et oppression. Chaque critique ci-dessous touche au moins l'un des trois. Pour chacune, la page dit ce que fait l'association, et ce que ça ne résout pas.",
       ],

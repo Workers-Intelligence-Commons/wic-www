@@ -50,6 +50,12 @@ const jsonLd = [
   </section>
 
   <section>
+    <SectionHeading>{t.critiques.heading}</SectionHeading>
+    <p>{t.critiques.body}</p>
+    <div class="actions"><ButtonLink variant="ink" href={pathFor(locale, "criticism")}>{t.critiques.link}</ButtonLink></div>
+  </section>
+
+  <section>
     <SectionHeading>{t.help.heading}</SectionHeading>
     <p>{t.help.body}</p>
     <div class="actions">

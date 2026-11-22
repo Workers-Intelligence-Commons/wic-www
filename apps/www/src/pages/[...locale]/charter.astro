@@ -1,0 +1,40 @@
+---
+import { ButtonLink, Contents, Notice, PageTitle, SectionHeading } from "@workers-intelligence-commons/components";
+import Base from "../../layouts/Base.astro";
+import type { Locale } from "../../i18n/locales.ts";
+import { localePaths, pathFor } from "../../i18n/routes.ts";
+import { charter } from "../../copy/charter.ts";
+import { constitution } from "../../copy/constitution.ts";
+
+export const getStaticPaths = localePaths;
+const { locale } = Astro.props as { locale: Locale };
+const t = charter[locale];
+const contents = t.sections.map((s) => ({ href: `#${s.id}`, label: s.title }));
+---
+<Base locale={locale} page="charter" title={t.title} description={t.description}>
+  <PageTitle>{t.title}</PageTitle>
+  <div class="opening">
+    <p class="lead">{t.lead}</p>
+    <div class="notice-row"><Notice title={t.statusTitle}>{t.status}</Notice></div>
+  </div>
+  {t.translation && <p class="aside">{t.translation} <a href={pathFor("fr", "charter")} hreflang="fr" lang="fr">Version française</a></p>}
+
+  <div class="charter-layout">
+    <div class="charter-nav"><Contents title={t.contents} items={contents} /></div>
+    <div class="charter-body">
+      <section class="charter">
+        {t.intro.map((p) => <p>{p}</p>)}
+      </section>
+      {t.sections.map((s) => (
+        <section id={s.id} class="charter">
+          <SectionHeading kicker={s.ref}>{s.title}</SectionHeading>
+          <ul class="points">
+            {s.points.map((p) => <li>{p}</li>)}
+          </ul>
+        </section>
+      ))}
+    </div>
+  </div>
+
+  <div class="actions section"><ButtonLink variant="quiet" href={pathFor(locale, "constitution")}>{constitution[locale].title}</ButtonLink></div>
+</Base>

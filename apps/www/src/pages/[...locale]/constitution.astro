@@ -45,5 +45,8 @@ const contents = [
     </div>
   </div>
 
-  <div class="actions section"><ButtonLink variant="quiet" href={pathFor(locale, "governance")}>{t.back}</ButtonLink></div>
+  <div class="actions section">
+    <ButtonLink href={pathFor(locale, "charter")}>{t.charterLink}</ButtonLink>
+    <ButtonLink variant="quiet" href={pathFor(locale, "governance")}>{t.back}</ButtonLink>
+  </div>
 </Base>

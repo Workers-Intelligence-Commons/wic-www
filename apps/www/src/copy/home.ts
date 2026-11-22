@@ -8,6 +8,7 @@ export const home: Localized<{
   lead: string;
   status: string;
   projects: { heading: string; items: { title: string; body: string; anchor: string }[]; link: string };
+  critiques: { heading: string; body: string; link: string };
   help: { heading: string; body: string; support: string; contribute: string };
   news: { heading: string; all: string };
 }> = {
@@ -28,6 +29,11 @@ export const home: Localized<{
         { title: "Design system", body: "The cut-paper look every site and application shares.", anchor: "design-system" },
       ],
       link: "See the projects",
+    },
+    critiques: {
+      heading: "Criticism of AI",
+      body: "Most criticism of artificial intelligence is right: stolen work, hidden labour, concentration of power, ecology, jobs, surveillance. The association answers it one point at a time, including what it does not solve.",
+      link: "Read the criticism and the answers",
     },
     help: {
       heading: "Compute, work, and later money",
@@ -54,6 +60,11 @@ export const home: Localized<{
         { title: "Design system", body: "L'air de papier découpé que partagent tous les sites et applications.", anchor: "design-system" },
       ],
       link: "Voir les projets",
+    },
+    critiques: {
+      heading: "Les critiques de l'IA",
+      body: "La plupart des critiques adressées à l'intelligence artificielle sont justes : vol des œuvres, travail caché, concentration du pouvoir, écologie, emploi, surveillance. L'association y répond point par point, y compris sur ce qu'elle ne résout pas.",
+      link: "Lire les critiques et les réponses",
     },
     help: {
       heading: "Du calcul, du travail, et plus tard de l'argent",
