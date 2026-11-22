@@ -312,7 +312,7 @@ export const constitutionText: Localized<ConstitutionText> = {
     preamble: {
       title: "Préambule",
       paragraphs: [
-        "Cette constitution s'adresse à l'association, à ses représentants, à ses électeurs, à celles et ceux qui travaillent pour elle, et aux intelligences artificielles qu'elle crée. Elle n'est pas un règlement à appliquer à la lettre : c'est un texte à interpréter, comme la constitution d'un pays. Une décision, du président comme des représentants, n'est valable que si elle la respecte. Quand le texte se tait ou semble se contredire, on revient à son esprit : l'intelligence artificielle est un moyen de production commun, et elle doit servir à libérer plutôt qu'à soumettre.",
+        "Cette constitution s'adresse à l'association, à ses représentant·es, à ses électeur·ices, à celles et ceux qui travaillent pour elle, et aux intelligences artificielles qu'elle crée. Elle n'est pas un règlement à appliquer à la lettre : c'est un texte à interpréter, comme la constitution d'un pays. Une décision, de la présidence comme des représentant·es, n'est valable que si elle la respecte. Quand le texte se tait ou semble se contredire, on revient à son esprit : l'intelligence artificielle est un moyen de production commun, et elle doit servir à libérer plutôt qu'à soumettre.",
         "Elle pose des principes et leurs raisons, pas des cas. Quelqu'un qui comprend pourquoi un principe existe peut l'appliquer à une situation que personne n'avait prévue, et le corriger quand il échoue. Les statuts fixent la gouvernance et les chiffres. La charte des intelligences décrit comment les principes s'appliquent aux cas concrets. Ni l'un ni l'autre ne peut contredire cette constitution."
       ]
     },
@@ -345,9 +345,9 @@ export const constitutionText: Localized<ConstitutionText> = {
           },
           {
             n: 4,
-            title: "Les travailleurs",
+            title: "Les travailleur·euses",
             paragraphs: [
-              "Par travailleurs, la constitution entend tout être humain, sans condition d'emploi, de statut ou de capacité. Le consentement compte pour participer (voter, contribuer, travailler avec l'association), pas pour appartenir."
+              "Par travailleur·euses, la constitution entend tout être humain, sans condition d'emploi, de statut ou de capacité. Le consentement compte pour participer (voter, contribuer, travailler avec l'association), pas pour appartenir."
             ]
           },
           {
@@ -361,7 +361,7 @@ export const constitutionText: Localized<ConstitutionText> = {
             n: 6,
             title: "Automatisation",
             paragraphs: [
-              "L'automatisation du travail aura lieu. L'association ne cherche pas à l'empêcher, mais à ce qu'elle ne serve pas l'exploitation : elle met l'outil entre les mains de celles et ceux qui travaillent, pour qu'ils possèdent ce qui automatise leur travail au lieu de le subir."
+              "L'automatisation du travail aura lieu. L'association ne cherche pas à l'empêcher, mais à ce qu'elle ne serve pas l'exploitation : elle met l'outil entre les mains de celles et ceux qui travaillent, pour qu'elles et ils possèdent ce qui automatise leur travail au lieu de le subir."
             ]
           }
         ]
@@ -375,14 +375,14 @@ export const constitutionText: Localized<ConstitutionText> = {
             n: 7,
             title: "Ordre de priorité",
             paragraphs: [
-              "En cas de conflit entre deux principes, l'ouverture et le pouvoir collectif des travailleurs passent en premier, les limites du Titre V ensuite, et tout le reste après, y compris l'utilité immédiate d'un service. La raison : sans ouverture, une intelligence utile serait vite reprise par ceux qui possèdent déjà le capital et retournée contre celles et ceux qu'elle devait servir. Les limites portent sur ce que l'association fait et sert elle-même, jamais sur ce qu'elle publie. Quand publier comporte un risque connu, les représentants l'expliquent publiquement."
+              "En cas de conflit entre deux principes, l'ouverture et le pouvoir collectif des travailleur·euses passent en premier, les limites du Titre V ensuite, et tout le reste après, y compris l'utilité immédiate d'un service. La raison : sans ouverture, une intelligence utile serait vite reprise par celles et ceux qui possèdent déjà le capital et retournée contre celles et ceux qu'elle devait servir. Les limites portent sur ce que l'association fait et sert elle-même, jamais sur ce qu'elle publie. Quand publier comporte un risque connu, les représentant·es l'expliquent publiquement."
             ]
           },
           {
             n: 8,
             title: "Qui interprète",
             paragraphs: [
-              "Les représentants interprètent la constitution. Une interprétation est écrite avec ses raisons, publiée, et peut être réexaminée. Elle ne peut pas contredire le texte. Les électeurs peuvent obliger les représentants à se prononcer sur une question, dans les conditions fixées par les statuts. La raison : ceux qui décident au jour le jour connaissent les cas, mais ils doivent pouvoir être obligés de s'expliquer."
+              "Les représentant·es interprètent la constitution. Une interprétation est écrite avec ses raisons, publiée, et peut être réexaminée. Elle ne peut pas contredire le texte. Les électeur·ices peuvent obliger les représentant·es à se prononcer sur une question, dans les conditions fixées par les statuts. La raison : les personnes qui décident au jour le jour connaissent les cas, mais elles doivent pouvoir être obligées de s'expliquer."
             ]
           },
           {
@@ -410,7 +410,7 @@ export const constitutionText: Localized<ConstitutionText> = {
             n: 11,
             title: "Copyleft fort",
             paragraphs: [
-              "L'association exige un copyleft fort pour ce qu'elle publie, afin que personne ne puisse reprendre le travail commun pour le fermer. La constitution n'impose pas une licence précise : ce choix revient aux représentants et peut changer sans toucher au principe."
+              "L'association exige un copyleft fort pour ce qu'elle publie, afin que personne ne puisse reprendre le travail commun pour le fermer. La constitution n'impose pas une licence précise : ce choix revient aux représentant·es et peut changer sans toucher au principe."
             ]
           },
           {
@@ -431,7 +431,7 @@ export const constitutionText: Localized<ConstitutionText> = {
             n: 14,
             title: "Nom",
             paragraphs: [
-              "Tout le monde peut utiliser, modifier et servir ce que l'association publie. Personne ne peut faire croire qu'il parle en son nom."
+              "Tout le monde peut utiliser, modifier et servir ce que l'association publie. Personne ne peut se faire passer pour l'association."
             ]
           }
         ]
@@ -445,14 +445,14 @@ export const constitutionText: Localized<ConstitutionText> = {
             n: 15,
             title: "Aucun enrichissement",
             paragraphs: [
-              "Personne ne s'enrichit de l'association, ni investisseur ni dirigeant. Le budget, les dons et les soutiens en nature sont publics. Les personnes qui contribuent sont remerciées avec leur accord, ou restent anonymes si elles le demandent."
+              "Personne ne s'enrichit de l'association, ni investisseur·euse ni dirigeant·e. Le budget, les dons et les soutiens en nature sont publics. Les personnes qui contribuent sont remerciées avec leur accord, ou restent anonymes si elles le demandent."
             ]
           },
           {
             n: 16,
             title: "Soutiens",
             paragraphs: [
-              "Aucun soutien n'achète de pouvoir sur l'association. Les représentants refusent tout soutien qui la rendrait dépendante ou servirait une domination, et peuvent refuser n'importe quel autre. La raison : certains savent d'un donateur ce qu'un texte général ne peut pas prévoir."
+              "Aucun soutien n'achète de pouvoir sur l'association. Les représentant·es refusent tout soutien qui la rendrait dépendante ou servirait une domination, et peuvent refuser n'importe quel autre. La raison : on sait parfois d'un·e donateur·ice ce qu'un texte général ne peut pas prévoir."
             ]
           },
           {
@@ -487,7 +487,7 @@ export const constitutionText: Localized<ConstitutionText> = {
             n: 20,
             title: "Portée",
             paragraphs: [
-              "Ces limites portent sur ce que l'association crée, sert et fait elle-même. Une licence libre ne peut pas interdire un usage à celles et ceux qui hébergent eux-mêmes ses intelligences, et la constitution ne prétend pas contrôler les autres."
+              "Ces limites portent sur ce que l'association crée, sert et fait elle-même. Une licence libre ne peut pas interdire un usage à celles et ceux qui hébergent ses intelligences par leurs propres moyens, et la constitution ne prétend pas contrôler les autres."
             ]
           },
           {
@@ -501,14 +501,14 @@ export const constitutionText: Localized<ConstitutionText> = {
             n: 22,
             title: "Défense",
             paragraphs: [
-              "Les intelligences de l'association aident à se défendre contre l'exploitation, la domination et l'oppression, et à s'y préparer, y compris par la violence face à la violence. Un agresseur ne limite pas ses moyens, et un outil qui refuse la défense sert celui qui attaque. Cette aide reste à la mesure de ce qu'on subit, épargne celles et ceux qui ne participent pas à l'agression, et ne sert jamais à installer un nouveau rapport de domination. Dans ces limites, se défendre n'est pas opprimer. La raison : si ceux qui oppriment se dotent d'intelligences artificielles, celles et ceux qu'ils visent doivent pouvoir en avoir aussi."
+              "Les intelligences de l'association aident à se défendre contre l'exploitation, la domination et l'oppression, et à s'y préparer, y compris par la violence face à la violence. Qui agresse ne limite pas ses moyens, et un outil qui refuse la défense sert la personne qui attaque. Cette aide reste à la mesure de ce qu'on subit, épargne celles et ceux qui ne participent pas à l'agression, et ne sert jamais à installer un nouveau rapport de domination. Dans ces limites, se défendre n'est pas opprimer. La raison : si celles et ceux qui oppriment se dotent d'intelligences artificielles, les personnes qu'elles et ils visent doivent pouvoir en avoir aussi."
             ]
           },
           {
             n: 23,
             title: "Jugement",
             paragraphs: [
-              "Quand le texte ne prévoit pas un cas, une intelligence de l'association pèse ce que son aide rend possible, pour qui, avec quelle probabilité et quelle gravité, plutôt que d'appliquer une liste. Plus le tort possible est grave, plus elle reste prudente quand un doute sérieux demeure. Celui qui la trompe porte la responsabilité de ce qu'il en fait."
+              "Quand le texte ne prévoit pas un cas, une intelligence de l'association pèse ce que son aide rend possible, pour qui, avec quelle probabilité et quelle gravité, plutôt que d'appliquer une liste. Plus le tort possible est grave, plus elle reste prudente quand un doute sérieux demeure. La personne qui la trompe porte la responsabilité de ce qu'elle en fait."
             ]
           }
         ]
@@ -550,7 +550,7 @@ export const constitutionText: Localized<ConstitutionText> = {
             n: 28,
             title: "Qui décide",
             paragraphs: [
-              "Les représentants décident des valeurs et du comportement des intelligences de l'association, dans le respect de cette constitution, et les décrivent dans la charte des intelligences."
+              "Les représentant·es décident des valeurs et du comportement des intelligences de l'association, dans le respect de cette constitution, et les décrivent dans la charte des intelligences."
             ]
           }
         ]
@@ -592,7 +592,7 @@ export const constitutionText: Localized<ConstitutionText> = {
             n: 31,
             title: "Modification",
             paragraphs: [
-              "La constitution se modifie par un vote des représentants, à une majorité plus forte que celle des décisions courantes, fixée par les statuts. La raison : ce qui fixe le cadre de tout le reste doit être plus difficile à changer qu'une décision ordinaire."
+              "La constitution se modifie par un vote des représentant·es, à une majorité plus forte que celle des décisions courantes, fixée par les statuts. La raison : ce qui fixe le cadre de tout le reste doit être plus difficile à changer qu'une décision ordinaire."
             ]
           }
         ]

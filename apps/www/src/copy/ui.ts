@@ -98,7 +98,7 @@ export const ui: Localized<{
     ],
     language: "Langue",
     footerNav: [
-      { page: "contributors", label: "Contributeurs" },
+      { page: "contributors", label: "Contributeur·ices" },
       { page: "contact", label: "Contact" },
       { page: "legal", label: "Mentions légales" },
     ],

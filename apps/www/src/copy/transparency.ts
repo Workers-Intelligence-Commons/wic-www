@@ -61,7 +61,7 @@ export const transparency: Localized<{
       heading: "Registre des dons en nature",
       body: "Chaque don est noté le jour où il arrive, avec ce qu'il est et ce à quoi il sert. La personne qui donne n'est nommée qu'avec son accord.",
       empty: "Aucun don en nature n'a encore été reçu.",
-      columns: { date: "date", giver: "donateur", what: "don", use: "usage" },
+      columns: { date: "date", giver: "donateur·ice", what: "don", use: "usage" },
       anonymous: "anonyme",
     },
     promises: {

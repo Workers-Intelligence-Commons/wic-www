@@ -5,6 +5,7 @@ Read `README.md` for the layout. These rules apply to every change.
 ## Text
 
 - Every visible string goes in `apps/www/src/copy/`, in both English and French. Never write text in a page or component.
+- French text is inclusive: a neutral word when one exists (la présidence), otherwise the point médian (adhérent·es, électeur·ices, représentant·es).
 - Follow the content rules of the design system's README: say what is true including what is missing, no hype, no exclamation marks, no emoji, sentence case, lowercase italic kickers.
 - Facts used on several pages (addresses, repositories, licenses) live in `apps/www/src/data/site.ts` only.
 - A person is listed in `apps/www/src/data/contributors.ts`, and a donor named in the in-kind register, only after they agreed to it.

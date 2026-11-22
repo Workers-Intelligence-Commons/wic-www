@@ -82,14 +82,14 @@ export const mission: Localized<{ title: string; description: string; lead: stri
         heading: "L'intelligence est un moyen de production",
         paragraphs: [
           "L'intelligence artificielle est un outil, comme une machine dans un atelier. Elle peut aider à comprendre et apprendre, à créer, à alléger le travail, à se protéger et à s'organiser. Un outil aussi important ne devrait pas appartenir à une poignée d'entreprises.",
-          "Par travailleurs, le projet entend tout être humain, quels que soient son emploi, son statut ou ses capacités. Et par intelligence artificielle, il entend toutes les formes qu'elle peut prendre, pas seulement le modèle de langage qu'il construit en premier.",
+          "Par travailleur·euses, le projet entend tout être humain, quels que soient son emploi, son statut ou ses capacités. Et par intelligence artificielle, il entend toutes les formes qu'elle peut prendre, pas seulement le modèle de langage qu'il construit en premier.",
         ],
       },
       {
         heading: "Contre l'exploitation, la domination et l'oppression",
         paragraphs: [
           "L'exploitation, c'est s'approprier le travail ou la valeur que d'autres produisent. La domination, c'est maintenir des personnes dans une position inférieure, sans pouvoir réel de refuser ni de défaire ce qui les concerne. L'oppression, c'est contraindre des corps et des vies par la violence ou la menace. Les trois se mêlent, et les intelligences de l'association n'aident jamais à les exercer.",
-          "Elles aident en revanche à s'en défendre, et à s'y préparer. Un agresseur ne limite pas ses moyens, et un outil qui refuse la défense sert celui qui attaque.",
+          "Elles aident en revanche à s'en défendre, et à s'y préparer. Qui agresse ne limite pas ses moyens, et un outil qui refuse la défense sert la personne qui attaque.",
         ],
       },
       {
@@ -110,13 +110,13 @@ export const mission: Localized<{ title: string; description: string; lead: stri
         heading: "On vend le service, jamais l'intelligence",
         paragraphs: [
           "Héberger une intelligence coûte de l'argent, et un service payant pourra un jour couvrir ce coût. Ce qu'il vend, c'est la fiabilité, des limites d'usage, du support et de l'infrastructure. L'intelligence reste libre, l'auto-hébergement reste possible, et n'importe qui peut la servir aussi, y compris contre paiement. C'est ce qui garde les prix honnêtes.",
-          "Personne ne s'enrichit : aucun bénéfice ne va à des investisseurs ni aux personnes qui dirigent l'association, et la rémunération la plus haute ne dépasse jamais trois fois la plus basse.",
+          "Personne ne s'enrichit : aucun bénéfice ne va à des investisseur·euses ni aux personnes qui dirigent l'association, et la rémunération la plus haute ne dépasse jamais trois fois la plus basse.",
         ],
       },
       {
         heading: "L'automatisation entre les mains de celles et ceux qui travaillent",
         paragraphs: [
-          "L'automatisation du travail aura lieu. L'association ne cherche pas à l'empêcher, mais à ce qu'elle ne serve pas l'exploitation : elle met l'outil entre les mains de celles et ceux qui travaillent, pour qu'ils possèdent ce qui automatise leur travail au lieu de le subir. Un outil ouvert ne redistribue pas les gains à lui seul, et l'association ne prétend pas le contraire.",
+          "L'automatisation du travail aura lieu. L'association ne cherche pas à l'empêcher, mais à ce qu'elle ne serve pas l'exploitation : elle met l'outil entre les mains de celles et ceux qui travaillent, pour qu'elles et ils possèdent ce qui automatise leur travail au lieu de le subir. Un outil ouvert ne redistribue pas les gains à lui seul, et l'association ne prétend pas le contraire.",
         ],
       },
     ],

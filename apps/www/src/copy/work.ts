@@ -87,11 +87,11 @@ export const work: Localized<{
     title: "Comment on travaille",
     description:
       "Comment Workers' Intelligence Commons construit son IA : des sources aux licences claires et aux décisions signées, un entraînement limité au nécessaire, un travail juste pour celles et ceux qui la construisent, et ses propres outils.",
-    lead: "Un outil qui prétend servir les travailleurs doit être fabriqué d'une façon que les travailleurs pourraient accepter. Voici les règles que le projet s'impose, de ce dont ses intelligences apprennent jusqu'aux personnes qui font le travail.",
+    lead: "Un outil qui prétend servir les travailleur·euses doit être fabriqué d'une façon que les travailleur·euses pourraient accepter. Voici les règles que le projet s'impose, de ce dont ses intelligences apprennent jusqu'aux personnes qui font le travail.",
     summary: [
       { title: "Sources", body: "Chaque source tracée, avec un droit d'usage clair, admise par une personne nommée.", href: "#sources" },
       { title: "Entraînement", body: "Petit d'abord, mesuré, et jamais plus que nécessaire.", href: "#training" },
-      { title: "Personnes", body: "Pas de travail gratuit caché, pas d'annotation sous-payée, du crédit pour tous.", href: "#people" },
+      { title: "Personnes", body: "Pas de travail gratuit caché, pas d'annotation sous-payée, du crédit pour toutes et tous.", href: "#people" },
     ],
     sections: [
       {
@@ -101,7 +101,7 @@ export const work: Localized<{
         points: [
           "Une source n'entre que si son droit d'usage permet clairement de publier sous copyleft ce qui en est appris. Dans le doute, elle reste dehors.",
           "Chaque décision d'admettre ou de refuser une source porte le nom déclaré de la personne qui l'a prise. Une source ne sert à l'entraînement que si quelqu'un l'a admise et que personne ne l'a refusée.",
-          "Quand un auteur dit que son œuvre ne doit pas servir à l'entraînement, ce souhait est respecté.",
+          "Quand un·e auteur·ice dit que son œuvre ne doit pas servir à l'entraînement, ce souhait est respecté.",
           "Effacement sur demande : une demande admise retire le passage, et tous les entraînements suivants se font sans lui.",
           "Pas de distillation. Les modèles sont entraînés de zéro, sans aucune sortie du modèle d'une autre entreprise dans les données et sans modèle de base existant.",
           "La provenance voyage avec chaque modèle : il nomme chaque source dont il a appris, avec son crédit et sa licence.",
@@ -119,14 +119,14 @@ export const work: Localized<{
       },
       {
         id: "people",
-        heading: "Celles et ceux qui le construisent sont traités en travailleurs",
+        heading: "Celles et ceux qui le construisent sont traité·es en travailleur·euses",
         intro: "Une IA bâtie sur du travail exploité contredirait tout ce que défend le projet.",
         points: [
           "Pas de travail gratuit déguisé : le bénévolat est toujours libre et explicite.",
           "L'annotation, la modération et les tâches semblables ne sont jamais confiées à des personnes mal payées.",
-          "Chaque contributeur est crédité, avec son accord, ou reste anonyme s'il le demande.",
-          "Les salariés ont voix au chapitre : ils sont électeurs dès leur premier jour et, après un ou deux mois, candidats par défaut pour devenir représentants.",
-          "Chaque rémunération est votée par les représentants, sans que la personne concernée vote, et son montant est publié. La plus haute ne dépasse jamais trois fois la plus basse.",
+          "Chaque contributeur·ice est crédité·e, avec son accord, ou reste anonyme sur demande.",
+          "Les salarié·es ont voix au chapitre : électeur·ices dès leur premier jour, elles et ils sont, après un ou deux mois, candidat·es par défaut pour devenir représentant·es.",
+          "Chaque rémunération est votée par les représentant·es, sans que la personne concernée vote, et son montant est publié. La plus haute ne dépasse jamais trois fois la plus basse.",
         ],
       },
       {
@@ -135,7 +135,7 @@ export const work: Localized<{
         intro: "Utiliser un outil ne devrait pas vouloir dire le nourrir.",
         points: [
           "Ce que les gens écrivent aux services de l'association ne sert pas à entraîner ses intelligences.",
-          "Seule exception, un mode contributeur séparé : un document que la personne signe, et un point d'accès distinct dont on sait que l'accord a été donné. Cet accord peut être retiré.",
+          "Seule exception, un mode contribution séparé : un document que la personne signe, et un point d'accès distinct dont on sait que l'accord a été donné. Cet accord peut être retiré.",
         ],
       },
       {

@@ -142,7 +142,7 @@ export const support: Localized<{
     },
     books: {
       heading: "Où ça va",
-      body: "La page transparence liste l'argent et le calcul reçus et dépensés, ainsi que le registre des dons en nature. Un donateur peut demander à rester anonyme.",
+      body: "La page transparence liste l'argent et le calcul reçus et dépensés, ainsi que le registre des dons en nature. Un·e donateur·ice peut demander à rester anonyme.",
       link: "Voir la page transparence",
     },
   },

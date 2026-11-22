@@ -30,7 +30,7 @@ export const constitution: Localized<{
     title: "Constitution",
     description:
       "La constitution de Workers' Intelligence Commons : les principes que toute décision de l'association doit respecter, avec leurs raisons. Égalité, ouverture, argent, limites, intelligences de l'association, données et travail.",
-    lead: "Toute décision de l'association, du président comme des représentants, doit respecter ce texte. Il pose des principes et leurs raisons plutôt que des cas, pour que celles et ceux qui le lisent puissent juger ce qu'il n'a pas prévu. Les statuts portent la gouvernance et les chiffres, et la charte des intelligences porte les cas concrets.",
+    lead: "Toute décision de l'association, de la présidence comme des représentant·es, doit respecter ce texte. Il pose des principes et leurs raisons plutôt que des cas, pour que celles et ceux qui le lisent puissent juger ce qu'il n'a pas prévu. Les statuts portent la gouvernance et les chiffres, et la charte des intelligences porte les cas concrets.",
     statusTitle: "brouillon",
     status:
       "Ce texte est un brouillon. Il doit encore être vérifié au regard du droit des associations et des règles de droit qu'il touche, et il continuera d'évoluer, comme toute constitution.",

@@ -75,7 +75,7 @@ export const projects: Localized<{ title: string; description: string; lead: str
         name: "WPT : Workers' Pre-trained Transformer",
         paragraphs: [
           "WPT est un modèle de langage ouvert, entraîné de zéro uniquement sur des contenus dont la licence est claire. Son dépôt contient tout ce qu'il faut pour construire un modèle WPT à partir de rien : le dépôt de textes qui garde les textes et les décisions humaines prises sur eux, le code qui construit un corpus, entraîne, évalue et fait tourner le modèle, et les recettes des modèles.",
-          "Chaque décision d'admettre ou de refuser un texte porte le nom de la personne qui l'a prise. Chaque dossier de modèle contient une notice et les crédits de tous les textes dont il a appris. Le souhait d'un auteur que son œuvre ne serve pas à l'entraînement est respecté, et une demande d'effacement admise retire le passage de tous les corpus suivants.",
+          "Chaque décision d'admettre ou de refuser un texte porte le nom de la personne qui l'a prise. Chaque dossier de modèle contient une notice et les crédits de tous les textes dont il a appris. Le souhait d'un·e auteur·ice que son œuvre ne serve pas à l'entraînement est respecté, et une demande d'effacement admise retire le passage de tous les corpus suivants.",
         ],
         facts: [
           { label: "licence", value: site.codeLicense },

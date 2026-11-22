@@ -28,17 +28,17 @@ export const contributorsPage: Localized<{
     },
   },
   fr: {
-    title: "Contributeurs",
+    title: "Contributeur·ices",
     description:
       "Les personnes qui donnent leur travail, du calcul ou de l'argent à Workers' Intelligence Commons, remerciées par leur nom quand elles l'acceptent.",
-    lead: "Les contributeurs sont remerciés par leur nom, avec leur accord, ou restent anonymes s'ils le demandent. Personne n'apparaît ici sans avoir dit oui.",
+    lead: "Les contributeur·ices sont remercié·es par leur nom, avec leur accord, ou restent anonymes sur demande. Personne n'apparaît ici sans avoir dit oui.",
     listKicker: "dans l'ordre d'arrivée",
     listHeading: "Merci à",
     empty: "Personne n'est encore listé.",
     join: {
       heading: "Être listé, ou pas",
       paragraphs: [
-        `Si vous avez contribué du code, de la recherche, de la relecture, du calcul ou autre chose et voulez être remercié ici, écrivez à <a href="mailto:${site.contact}">${site.contact}</a> ou ouvrez une issue sur <a href="${site.repositories.www}/issues">le dépôt de ce site</a>, avec le nom que vous voulez voir affiché.`,
+        `Si vous avez contribué du code, de la recherche, de la relecture, du calcul ou autre chose et voulez être remercié·e ici, écrivez à <a href="mailto:${site.contact}">${site.contact}</a> ou ouvrez une issue sur <a href="${site.repositories.www}/issues">le dépôt de ce site</a>, avec le nom que vous voulez voir affiché.`,
         "Vous pouvez demander à être retiré à tout moment, et vous le serez.",
         `Les contributions au code se voient aussi dans l'historique de chaque dépôt sur <a href="${site.github}">GitHub</a>.`,
       ],

@@ -8,7 +8,7 @@ Workers' Intelligence Commons a maintenant un site. Il dit à quoi sert le proje
 
 ## Où en est le projet
 
-Une seule personne porte le projet. L'association n'est pas encore fondée : ses statuts et sa constitution existent à l'état de brouillon, résumés sur la page [gouvernance](/fr/governance/), et doivent encore être relus par un juriste.
+Une seule personne porte le projet. L'association n'est pas encore fondée : ses statuts et sa constitution existent à l'état de brouillon, résumés sur la page [gouvernance](/fr/governance/), et doivent encore être relus par un·e juriste.
 
 Aucun moyen de faire un don n'est ouvert. Aucun argent ne passe par un compte personnel, donc les dons attendront qu'un hébergeur fiscal ou l'association puisse les recevoir. La page [transparence](/fr/transparency/) part de zéro et sera tenue à jour.
 

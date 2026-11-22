@@ -115,7 +115,7 @@ export const criticism: Localized<{
       heading: "À qui appartient la machine",
       paragraphs: [
         "La plupart des critiques adressées à l'intelligence artificielle sont justes. À y regarder de près, elles portent surtout sur qui la possède et sur la façon dont elle est fabriquée, pas sur la technique elle-même.",
-        "Les luddites ne cassaient pas les métiers à tisser parce qu'ils détestaient les machines, mais parce que les machines servaient contre eux. Marx faisait la même distinction : le problème n'est pas la machine, c'est à qui elle appartient. C'est pour ça que l'association veut reprendre l'intelligence artificielle plutôt que la laisser à ceux qui la possèdent déjà.",
+        "Les luddites ne cassaient pas les métiers à tisser par haine des machines, mais parce que les machines servaient contre elles et eux. Marx faisait la même distinction : le problème n'est pas la machine, c'est à qui elle appartient. C'est pour ça que l'association veut reprendre l'intelligence artificielle plutôt que la laisser à celles et ceux qui la possèdent déjà.",
         "Sa constitution emprunte trois mots à la sociologie des rapports sociaux, notamment aux travaux de Danièle Kergoat : exploitation, domination et oppression. Chaque critique ci-dessous touche au moins l'un des trois. Pour chacune, la page dit ce que fait l'association, et ce que ça ne résout pas.",
       ],
     },
@@ -125,14 +125,14 @@ export const criticism: Localized<{
         id: "stolen-work",
         heading: "Elle est bâtie sur des œuvres volées",
         critique: "Les grands modèles ont été entraînés sur des livres, des articles, des images et du code pris sans demander à celles et ceux qui les ont faits, et ils leur font maintenant concurrence.",
-        answer: "Rien n'entre dans ce dont les intelligences de l'association apprennent sans que le droit de l'utiliser soit clair. Chaque source est tracée avec son origine et sa licence, chaque décision de l'admettre porte un nom, le refus d'un auteur est respecté, et une demande d'effacement admise retire l'œuvre de tous les entraînements suivants.",
-        open: "Ce qui est sous licence claire est bien plus réduit que ce que prennent les grandes entreprises, si bien que les modèles de l'association resteront longtemps plus petits et moins forts. Et une licence qui autorise l'usage ne veut pas dire que l'auteur pensait à l'entraînement en la choisissant.",
+        answer: "Rien n'entre dans ce dont les intelligences de l'association apprennent sans que le droit de l'utiliser soit clair. Chaque source est tracée avec son origine et sa licence, chaque décision de l'admettre porte un nom, le refus d'un·e auteur·ice est respecté, et une demande d'effacement admise retire l'œuvre de tous les entraînements suivants.",
+        open: "Ce qui est sous licence claire est bien plus réduit que ce que prennent les grandes entreprises, si bien que les modèles de l'association resteront longtemps plus petits et moins forts. Et une licence qui autorise l'usage ne veut pas dire que l'auteur·ice pensait à l'entraînement en la choisissant.",
       },
       {
         id: "hidden-labour",
         heading: "Elle repose sur un travail caché et mal payé",
         critique: "Derrière chaque grand modèle, il y a des personnes qui annotent des données et filtrent des horreurs pour quelques dollars de l'heure, souvent loin de là où vont les profits.",
-        answer: "La constitution dit que l'association n'exploite personne : le travail pour elle est libre, reconnu et justement payé quand elle le demande, et la rémunération la plus haute ne dépasse jamais trois fois la plus basse. L'annotation et la modération ne sont jamais confiées à des personnes mal payées, et chaque contributeur est crédité s'il le veut.",
+        answer: "La constitution dit que l'association n'exploite personne : le travail pour elle est libre, reconnu et justement payé quand elle le demande, et la rémunération la plus haute ne dépasse jamais trois fois la plus basse. L'annotation et la modération ne sont jamais confiées à des personnes mal payées, et chaque contributeur·ice est crédité·e si elle ou il le veut.",
         open: "Les puces et les machines sur lesquelles l'association entraîne sont fabriquées dans des mines et des usines dont elle ne contrôle pas les conditions. Louer du calcul n'y change rien.",
       },
       {
@@ -140,7 +140,7 @@ export const criticism: Localized<{
         heading: "Elle concentre le pouvoir dans quelques entreprises",
         critique: "Une poignée d'entreprises possèdent les modèles, les données, les machines et le cloud, et le reste du monde loue l'accès à leurs conditions.",
         answer: "Tout ce que l'association publie est ouvert sous copyleft fort : n'importe qui peut l'héberger, le modifier et le servir, et toute amélioration servie au public doit être publiée. Ses applications ne dépendent d'aucun service extérieur obligatoire.",
-        open: "Des poids ouverts ne rendent pas le calcul commun. Entraîner un grand modèle demande toujours des machines que peu possèdent, et l'association dépendra longtemps des programmes de calcul public ou des donateurs.",
+        open: "Des poids ouverts ne rendent pas le calcul commun. Entraîner un grand modèle demande toujours des machines que peu possèdent, et l'association dépendra longtemps des programmes de calcul public ou des donateur·ices.",
       },
       {
         id: "ecology",
@@ -151,9 +151,9 @@ export const criticism: Localized<{
       },
       {
         id: "jobs",
-        heading: "Elle détruit l'emploi et met les travailleurs au pas",
+        heading: "Elle détruit l'emploi et met les travailleur·euses au pas",
         critique: "L'automatisation est vendue comme un progrès, mais elle sert à supprimer des postes, à accélérer les cadences et à surveiller celles et ceux qui restent.",
-        answer: "L'association ne prétend pas qu'on peut arrêter l'automatisation. Elle met l'outil entre les mains de celles et ceux qui travaillent, gratuit et auto-hébergeable, pour qu'un travailleur, un syndicat ou une coopérative puisse posséder ce qui automatise son travail. Ses intelligences n'aident jamais à exploiter ni à dominer, ce qui exclut les outils faits pour surveiller, noter ou discipliner des travailleurs.",
+        answer: "L'association ne prétend pas qu'on peut arrêter l'automatisation. Elle met l'outil entre les mains de celles et ceux qui travaillent, gratuit et auto-hébergeable, pour qu'un·e travailleur·euse, un syndicat ou une coopérative puisse posséder ce qui automatise son travail. Ses intelligences n'aident jamais à exploiter ni à dominer, ce qui exclut les outils faits pour surveiller, noter ou discipliner des travailleur·euses.",
         open: "Un outil ouvert ne redistribue pas à lui seul les gains de l'automatisation. C'est un combat politique, et un modèle, aussi ouvert soit-il, ne le gagne pas.",
       },
       {

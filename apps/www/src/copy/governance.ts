@@ -26,9 +26,9 @@ export const governance: Localized<{ title: string; description: string; lead: s
       {
         heading: "Supporters, electors, representatives",
         paragraphs: [
-          "Supporters back the association without a vote. Electors are supporters who vote to elect the representatives. Representatives decide on the constitution, on removing the president, and on salaries.",
-          "Anyone can become an elector. A supporter applies after three months, through a lasting contribution, a recurring donation of any amount, even one euro, or a direct invitation. A donation alone never gives a vote: it only gives the right to ask.",
-          "Representatives are elected by the electors for one year, founders included, and their number has no ceiling.",
+          "Supporters back the association, with a donation or with their help, without a vote. Electors are supporters who want to be represented: they elect the representatives. Representatives carry that voice and decide on the constitution, on removing the president, and on salaries.",
+          "Anyone can become an elector: after three months as a supporter, they only have to ask. The request is accepted as a matter of course, and the representatives can refuse it only for fraud, such as a fake or duplicate account, with a published reason.",
+          "After three months, any supporter can also stand to become a representative. Representatives are elected by the electors for one year, founders included, and their number has no ceiling.",
         ],
       },
       {
@@ -56,46 +56,46 @@ export const governance: Localized<{ title: string; description: string; lead: s
   fr: {
     title: "Gouvernance",
     description:
-      "Comment Workers' Intelligence Commons sera gouvernée : une association loi 1901 sous une constitution, avec adhérents, électeurs et représentants, un plan mensuel public et aucun bénéfice pour personne.",
+      "Comment Workers' Intelligence Commons sera gouvernée : une association loi 1901 sous une constitution, avec adhérent·es, électeur·ices et représentant·es, un plan mensuel public et aucun bénéfice pour personne.",
     lead: "Workers' Intelligence Commons sera une association à but non lucratif de loi 1901. Ses statuts et sa constitution existent à l'état de brouillon. Cette page les résume, et la constitution se lit en entier.",
     constitutionLink: "Lire la constitution complète",
     statusTitle: "brouillon",
     status:
-      "Brouillons. L'association n'est pas encore fondée, et rien ici n'a été relu par un juriste. Les textes peuvent changer avant d'être signés.",
+      "Brouillons. L'association n'est pas encore fondée, et rien ici n'a été relu par un·e juriste. Les textes peuvent changer avant d'être signés.",
     blocks: [
       {
         heading: "Une constitution",
         paragraphs: [
-          "L'association est régie par une constitution qui fixe les principes dans lesquels elle agit. Une décision, du président comme des représentants, n'est valable que si elle la respecte. La constitution donne ses raisons, pour que celles et ceux qui l'interprètent puissent juger les cas que personne n'avait prévus.",
-          "Elle part de l'égalité : tous les êtres humains sont libres et égaux en dignité et en droits. Sa mission est que l'intelligence artificielle appartienne à tout le monde et serve à abolir l'exploitation, la domination et l'oppression. Elle pose aussi que ce que l'association publie est ouvert sous un copyleft fort, qu'aucun bénéfice ne va à des investisseurs ni aux personnes qui la dirigent, que le budget, les dons et les soutiens en nature sont publics, et que ce dont ses intelligences apprennent est tracé, une source douteuse étant refusée.",
+          "L'association est régie par une constitution qui fixe les principes dans lesquels elle agit. Une décision, de la présidence comme des représentant·es, n'est valable que si elle la respecte. La constitution donne ses raisons, pour que celles et ceux qui l'interprètent puissent juger les cas que personne n'avait prévus.",
+          "Elle part de l'égalité : tous les êtres humains sont libres et égaux en dignité et en droits. Sa mission est que l'intelligence artificielle appartienne à tout le monde et serve à abolir l'exploitation, la domination et l'oppression. Elle pose aussi que ce que l'association publie est ouvert sous un copyleft fort, qu'aucun bénéfice ne va à des investisseur·euses ni aux personnes qui la dirigent, que le budget, les dons et les soutiens en nature sont publics, et que ce dont ses intelligences apprennent est tracé, une source douteuse étant refusée.",
         ],
       },
       {
-        heading: "Adhérents, électeurs, représentants",
+        heading: "Adhérent·es, électeur·ices, représentant·es",
         paragraphs: [
-          "Les adhérents soutiennent l'association sans droit de vote. Les électeurs sont des adhérents qui votent pour élire les représentants. Les représentants décident de la constitution, de la révocation du président et des rémunérations.",
-          "Tout le monde peut devenir électeur. Un adhérent se porte candidat après trois mois, par une contribution durable, un don récurrent de n'importe quel montant, même un euro, ou sur invitation directe. Un don seul ne donne jamais le droit de vote : il donne seulement le droit de demander.",
-          "Les représentants sont élus par les électeurs pour un an, fondateurs compris, et leur nombre n'est pas plafonné.",
+          "Les adhérent·es soutiennent l'association, par un don ou par leur aide, sans droit de vote. Les électeur·ices sont des adhérent·es qui veulent être représenté·es : elles et ils élisent les représentant·es. Les représentant·es portent cette voix et décident de la constitution, de la révocation de la présidence et des rémunérations.",
+          "Tout le monde peut devenir électeur·ice : après trois mois d'adhésion, il suffit de le demander. La demande est acceptée d'office, et les représentant·es ne peuvent la refuser que pour fraude, comme un faux compte ou un doublon, avec une raison publiée.",
+          "Après trois mois, tout·e adhérent·e peut aussi se présenter pour devenir représentant·e. Les représentant·es sont élu·es par les électeur·ices pour un an, fondateur·ices compris·es, et leur nombre n'est pas plafonné.",
         ],
       },
       {
         heading: "Un plan mensuel",
         paragraphs: [
-          "Chaque mois, le président publie ce qu'il compte faire et le budget correspondant. Les représentants votent alors sur une seule question : est-ce que cela respecte la constitution ? Si un tiers dit non, le plan est suspendu et discuté. Si deux tiers disent non, il est annulé.",
-          "Si un tiers des électeurs demande un sujet, il passe au vote des représentants au plan mensuel suivant.",
+          "Chaque mois, la présidence publie ce qu'elle compte faire et le budget correspondant. Les représentant·es votent alors sur une seule question : est-ce que cela respecte la constitution ? Si un tiers dit non, le plan est suspendu et discuté. Si deux tiers disent non, il est annulé.",
+          "Si un tiers des électeur·ices demande un sujet, il passe au vote des représentant·es au plan mensuel suivant.",
         ],
       },
       {
         heading: "Argent et rémunérations",
         paragraphs: [
-          "Aucun membre ni dirigeant ne reçoit une part des bénéfices ni un droit sur l'actif. Les excédents vont à la mission. Une rémunération est possible pour un travail réel, dans les limites que la loi fixe à une gestion désintéressée. Chacune est votée aux deux tiers des représentants, sans que la personne concernée vote, et son montant est publié. La rémunération la plus haute de l'association ne dépasse jamais trois fois la plus basse.",
+          "Aucun membre ni dirigeant·e ne reçoit une part des bénéfices ni un droit sur l'actif. Les excédents vont à la mission. Une rémunération est possible pour un travail réel, dans les limites que la loi fixe à une gestion désintéressée. Chacune est votée aux deux tiers des représentant·es, sans que la personne concernée vote, et son montant est publié. La rémunération la plus haute de l'association ne dépasse jamais trois fois la plus basse.",
           "Si l'association est dissoute, son actif va à une autre structure non lucrative à l'objet proche, jamais à un membre.",
         ],
       },
       {
         heading: "Changer les règles",
         paragraphs: [
-          "La constitution et les statuts ne changent que par un vote des trois quarts des représentants. Aucune modification ne peut jamais permettre de distribuer des bénéfices.",
+          "La constitution et les statuts ne changent que par un vote des trois quarts des représentant·es. Aucune modification ne peut jamais permettre de distribuer des bénéfices.",
         ],
       },
     ],
