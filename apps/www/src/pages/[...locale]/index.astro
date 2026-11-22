@@ -32,8 +32,10 @@ const jsonLd = [
 ---
 <Base locale={locale} page="" title={t.title} description={t.description} jsonLd={jsonLd}>
   <SloganText kicker={t.kicker} text={t.slogan} />
-  <p class="lead">{t.lead}</p>
-  <div class="notice-row"><Notice title={ui[locale].honestStatus}>{t.status}</Notice></div>
+  <div class="opening">
+    <p class="lead">{t.lead}</p>
+    <div class="notice-row"><Notice title={ui[locale].honestStatus}>{t.status}</Notice></div>
+  </div>
 
   <section>
     <SectionHeading>{t.projects.heading}</SectionHeading>

@@ -14,8 +14,10 @@ const c = t.inKind.columns;
 ---
 <Base locale={locale} page="transparency" title={t.title} description={t.description}>
   <PageTitle>{t.title}</PageTitle>
-  <p class="lead">{t.lead}</p>
-  <div class="notice-row"><Notice title={ui[locale].honestStatus}>{t.status}</Notice></div>
+  <div class="opening">
+    <p class="lead">{t.lead}</p>
+    <div class="notice-row"><Notice title={ui[locale].honestStatus}>{t.status}</Notice></div>
+  </div>
 
   <section>
     <SectionHeading>{t.money.heading}</SectionHeading>

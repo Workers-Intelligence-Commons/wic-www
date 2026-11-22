@@ -104,3 +104,23 @@ main > section, .section { margin-top: var(--space-12); }
 .numbered > section { counter-increment: principle; position: relative; }
 .numbered > section .wic-heading::before { content: counter(principle); display: block; font-family: var(--font-display); font-weight: 400; font-size: 56px; line-height: 1; color: var(--red); margin-bottom: var(--space-2); }
 .numbered > section:nth-child(2n) .wic-heading::before { color: var(--ink); }
+
+/* Constitution: its contents, then its text */
+.charter-layout { margin-top: var(--space-12); }
+.charter-body > section { margin-top: var(--space-12); }
+
+/* Wide screens: the page takes the width. Two columns only where two different things are read together. */
+@media (min-width: 1024px) {
+  body { font-size: 20px; line-height: 32px; }
+  .wrap { max-width: 1240px; padding-left: max(48px, env(safe-area-inset-left, 0px)); padding-right: max(48px, env(safe-area-inset-right, 0px)); }
+  .lead { font-size: 26px; line-height: 38px; }
+  .intro, .after { font-size: 24px; line-height: 36px; }
+  main > section, .section { margin-top: 96px; }
+  .opening { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--space-12); align-items: start; margin-bottom: var(--space-8); }
+  .opening .lead, .opening .notice-row { margin: 0; }
+  .sheets { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .charter-layout { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: var(--space-12); align-items: start; }
+  .charter-nav { position: sticky; top: var(--space-6); max-height: calc(100vh - 2 * var(--space-6)); overflow-y: auto; }
+  .charter-body > section { margin-top: 96px; }
+  .charter-body > section:first-child { margin-top: 0; }
+}

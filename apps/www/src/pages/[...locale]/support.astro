@@ -14,8 +14,10 @@ const t = support[locale];
 ---
 <Base locale={locale} page="support" title={t.title} description={t.description}>
   <SloganText kicker={t.kicker} text={t.slogan} />
-  <p class="lead">{t.lead}</p>
-  <div class="notice-row"><Notice title={ui[locale].honestStatus}>{t.status}</Notice></div>
+  <div class="opening">
+    <p class="lead">{t.lead}</p>
+    <div class="notice-row"><Notice title={ui[locale].honestStatus}>{t.status}</Notice></div>
+  </div>
 
   <section>
     <SectionHeading kicker={t.pays.kicker}>{t.pays.heading}</SectionHeading>
